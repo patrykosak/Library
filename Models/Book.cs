@@ -14,7 +14,7 @@ namespace Library.Models
         [MaxLength(150)]
         public string Title { get; set; }
         [Required]
-        [MaxLength(10)]
+        [MaxLength(60)]
         public string Author { get; set; }
         [Required]
         [Range(1600,2021)]
