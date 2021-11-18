@@ -12,8 +12,8 @@ namespace Library.DAL
         {
             var books = new List<Book>
             {
-            new Book{ISBN=1, Title="Pakt Piłsudski-Lenin",Author="Piotr Zychowicz",PublicYear=2014,Amount=4},
-            new Book{ISBN=2, Title="Pakt Ribbentrop-Beck",Author="Piotr Zychowicz",PublicYear=2014,Amount=3}
+            new Book{ISBN=1, Title="Pakt Piłsudski-Lenin",PublicYear=2014,Amount=4},
+            new Book{ISBN=2, Title="Pakt Ribbentrop-Beck",PublicYear=2014,Amount=3}
             };
 
             books.ForEach(s => context.Books.Add(s));
