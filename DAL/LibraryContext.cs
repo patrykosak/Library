@@ -20,6 +20,9 @@ namespace Library.DAL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //modelBuilder.Entity<Book>().ToTable("Book");
+            //modelBuilder.Entity<Author>().ToTable("Author");
+            //modelBuilder.Entity<PublishingHouse>().ToTable("PublishingHouse");
         }
     }
 }

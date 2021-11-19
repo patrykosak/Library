@@ -20,14 +20,14 @@ namespace Library.DAL
             context.SaveChanges();
             var authors = new List<Author>
             {
-            new Author{ID=1,Name="Piotr",Surname="Zychowicz", BirthDate=DateTime.Parse("1970-09-01")}
+            new Author{AuthorID=1,Name="Piotr",Surname="Zychowicz", BirthDate=DateTime.Parse("1970-09-01")}
  
             };
             authors.ForEach(s => context.Authors.Add(s));
             context.SaveChanges();
             var publishingHouses = new List<PublishingHouse>
             {
-            new PublishingHouse{Id=1,Name="Wydawnictwo"},
+            new PublishingHouse{publishingHouseID=1,Name="Wydawnictwo"},
             };
             publishingHouses.ForEach(s => context.PublishingHouses.Add(s));
             context.SaveChanges();

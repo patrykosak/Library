@@ -18,7 +18,8 @@ namespace Library.Controllers
         // GET: Book
         public ActionResult Index()
         {
-            return View(db.Books.ToList());
+            var books = db.Books.Include(b => b.Author).Include(b => b.PublishingHouse);
+            return View(books.ToList());
         }
 
         // GET: Book/Details/5
@@ -39,6 +40,8 @@ namespace Library.Controllers
         // GET: Book/Create
         public ActionResult Create()
         {
+            ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name");
+            ViewBag.publishingHouseID = new SelectList(db.PublishingHouses, "publishingHouseID", "Name");
             return View();
         }
 
@@ -47,7 +50,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ISBN,Title,PublicYear,Amount")] Book book)
+        public ActionResult Create([Bind(Include = "ISBN,Title,PublicYear,Amount,AuthorID,publishingHouseID")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +59,8 @@ namespace Library.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name", book.AuthorID);
+            ViewBag.publishingHouseID = new SelectList(db.PublishingHouses, "publishingHouseID", "Name", book.publishingHouseID);
             return View(book);
         }
 
@@ -71,6 +76,8 @@ namespace Library.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name", book.AuthorID);
+            ViewBag.publishingHouseID = new SelectList(db.PublishingHouses, "publishingHouseID", "Name", book.publishingHouseID);
             return View(book);
         }
 
@@ -79,7 +86,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ISBN,Title,PublicYear,Amount")] Book book)
+        public ActionResult Edit([Bind(Include = "ISBN,Title,PublicYear,Amount,AuthorID,publishingHouseID")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -87,6 +94,8 @@ namespace Library.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name", book.AuthorID);
+            ViewBag.publishingHouseID = new SelectList(db.PublishingHouses, "publishingHouseID", "Name", book.publishingHouseID);
             return View(book);
         }
 

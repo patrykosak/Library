@@ -47,7 +47,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name")] PublishingHouse publishingHouse)
+        public ActionResult Create([Bind(Include = "publishingHouseID,Name")] PublishingHouse publishingHouse)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name")] PublishingHouse publishingHouse)
+        public ActionResult Edit([Bind(Include = "publishingHouseID,Name")] PublishingHouse publishingHouse)
         {
             if (ModelState.IsValid)
             {
