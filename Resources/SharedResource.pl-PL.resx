@@ -117,10 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>O nas</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Autorzy</value>
+  </data>
   <data name="Books" xml:space="preserve">
     <value>Książki</value>
   </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Angielski</value>
+  </data>
+  <data name="German" xml:space="preserve">
+    <value>Niemiecki</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Dom</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="Library" xml:space="preserve">
+    <value>Biblioteka</value>
+  </data>
+  <data name="Polish" xml:space="preserve">
+    <value>Polski</value>
+  </data>
+  <data name="PublishingHouses" xml:space="preserve">
+    <value>Wydawnictwa</value>
   </data>
 </root>

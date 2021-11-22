@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Library</title>
+    <title>@Library.Resources.SharedResource.Library</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,24 +17,24 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Library", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink(@Library.Resources.SharedResource.Library, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink(Library.Resources.SharedResource.Home, "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink(Library.Resources.SharedResource.About, "About", "Home")</li>
+                    <li>@Html.ActionLink(Library.Resources.SharedResource.Contact, "Contact", "Home")</li>
                     <li>@Html.ActionLink(Library.Resources.SharedResource.Books, "Index", "Book")</li>
-                    <li>@Html.ActionLink("Authors", "Index", "Author")</li>
-                    <li>@Html.ActionLink("PublishingHouses", "Index", "PublishingHouse")</li>
+                    <li>@Html.ActionLink(Library.Resources.SharedResource.Authors, "Index", "Author")</li>
+                    <li>@Html.ActionLink(Library.Resources.SharedResource.PublishingHouses, "Index", "PublishingHouse")</li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             @Library.Resources.SharedResource.Language
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item">@Html.ActionLink("Polish", "Change", "Home", new { LanguageAbbrevation = "pl-PL" }, null)</a>
-                            <a class="dropdown-item">@Html.ActionLink("Germany", "Change", "Home", new { LanguageAbbrevation = "de-DE" }, null)</a>
-                            <a class="dropdown-item">@Html.ActionLink("English", "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)</a>
+                            <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.Polish, "Change", "Home", new { LanguageAbbrevation = "pl-PL" }, null)</a>
+                            <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.German, "Change", "Home", new { LanguageAbbrevation = "de-DE" }, null)</a>
+                            <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.English, "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)</a>
                         </div>
                     </li>
                 </ul>
