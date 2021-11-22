@@ -21,12 +21,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink(Library.Resources.SharedResource.Home, "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Books", "Index", "Book")</li>
+                    <li>@Html.ActionLink(Library.Resources.SharedResource.Books, "Index", "Book")</li>
                     <li>@Html.ActionLink("Authors", "Index", "Author")</li>
                     <li>@Html.ActionLink("PublishingHouses", "Index", "PublishingHouse")</li>
+                    <li>@Html.ActionLink(Library.Resources.SharedResource.Language, "Index", "Language")</li>
+                    <li>@Html.ActionLink("Polish", "Change", "Home", new { LanguageAbbrevation = "pl-PL" }, null)</li>
+                    <li>@Html.ActionLink("Germany", "Change", "Home", new { LanguageAbbrevation = "de" }, null)</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

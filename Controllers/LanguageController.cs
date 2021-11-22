@@ -8,24 +8,11 @@ using System.Web.Mvc;
 
 namespace Library.Controllers
 {
-    public class HomeController : Controller
+    public class LanguageController : Controller
     {
+        // GET: Language
         public ActionResult Index()
-        { 
-            return View();
-        }
-
-        public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
         public ActionResult Change(String LanguageAbbrevation)
@@ -35,12 +22,12 @@ namespace Library.Controllers
                 Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(LanguageAbbrevation);
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(LanguageAbbrevation);
             }
-            HttpCookie cookie = new HttpCookie("Language");
-            cookie.Value = LanguageAbbrevation;
-            Response.Cookies.Add(cookie);
+                HttpCookie cookie = new HttpCookie("Language");
+                cookie.Value = LanguageAbbrevation;
+                Response.Cookies.Add(cookie);
 
-            return View("Index");
-
+                return View();
+            
         }
     }
 }
