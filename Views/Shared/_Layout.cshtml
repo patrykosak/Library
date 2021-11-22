@@ -27,9 +27,16 @@
                     <li>@Html.ActionLink(Library.Resources.SharedResource.Books, "Index", "Book")</li>
                     <li>@Html.ActionLink("Authors", "Index", "Author")</li>
                     <li>@Html.ActionLink("PublishingHouses", "Index", "PublishingHouse")</li>
-                    <li>@Html.ActionLink(Library.Resources.SharedResource.Language, "Index", "Language")</li>
-                    <li>@Html.ActionLink("Polish", "Change", "Home", new { LanguageAbbrevation = "pl-PL" }, null)</li>
-                    <li>@Html.ActionLink("Germany", "Change", "Home", new { LanguageAbbrevation = "de" }, null)</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @Library.Resources.SharedResource.Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item">@Html.ActionLink("Polish", "Change", "Home", new { LanguageAbbrevation = "pl-PL" }, null)</a>
+                            <a class="dropdown-item">@Html.ActionLink("Germany", "Change", "Home", new { LanguageAbbrevation = "de-DE" }, null)</a>
+                            <a class="dropdown-item">@Html.ActionLink("English", "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)</a>
+                        </div>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
