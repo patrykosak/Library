@@ -21,7 +21,7 @@
                 </button>
                 @Html.ActionLink(@Library.Resources.SharedResource.Library, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <ul class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink(Library.Resources.SharedResource.Home, "Index", "Home")</li>
                     <li>@Html.ActionLink(Library.Resources.SharedResource.About, "About", "Home")</li>
@@ -33,21 +33,21 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             @Library.Resources.SharedResource.Language
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.Polish, "Change", "Home", new { LanguageAbbrevation = "pl-PL" }, null)</a>
-                            <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.German, "Change", "Home", new { LanguageAbbrevation = "de-DE" }, null)</a>
-                            <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.English, "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)</a>
-                        </div>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.Polish, "Change", "Home", new { LanguageAbbrevation = "pl-PL" }, null)</a></li>
+                            <li><a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.German, "Change", "Home", new { LanguageAbbrevation = "de-DE" }, null)</a></li>
+                            <li><a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.English, "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)</a></li>
+                        </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Motyw
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >
+                            @Library.Resources.SharedResource.Theme
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li> <a class="link label-inverse navbar-link " href="/Home/Motyw?id=1" id="someID">Basic</a> </li>
-                            <li><a class="link label-inverse navbar-link" href="/Home/Motyw?id=2" id="someIDd">Color</a></li>
-                            <li><a class="link label-inverse navbar-link" href="/Home/Motyw?id=3" id="someIdD">Dark</a></li>
+                            <li> <a class="link label-inverse navbar-link " href="/Home/ChangeTheme?id=1" id="someID">@Library.Resources.SharedResource.Basic</a> </li>
+                            <li><a class="link label-inverse navbar-link" href="/Home/ChangeTheme?id=2" id="someIDd">@Library.Resources.SharedResource.Color</a></li>
+                            <li><a class="link label-inverse navbar-link" href="/Home/ChangeTheme?id=3" id="someIdD">@Library.Resources.SharedResource.Dark</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -59,7 +59,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - @Library.Resources.SharedResource.Library</p>
         </footer>
     </div>
 

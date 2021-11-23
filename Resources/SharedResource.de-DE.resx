@@ -123,11 +123,20 @@
   <data name="Authors" xml:space="preserve">
     <value>Autoren</value>
   </data>
+  <data name="Basic" xml:space="preserve">
+    <value>Basic</value>
+  </data>
   <data name="Books" xml:space="preserve">
     <value>Bücher</value>
   </data>
+  <data name="Color" xml:space="preserve">
+    <value>Farbe</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Kontakt</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dunkel</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>Englisch</value>
@@ -149,5 +158,8 @@
   </data>
   <data name="PublishingHouses" xml:space="preserve">
     <value>Verlage</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thema</value>
   </data>
 </root>

@@ -42,7 +42,7 @@ namespace Library.Controllers
             return View("Index");
 
         }
-        public ActionResult Motyw(int id)
+        public ActionResult ChangeTheme(int id)
         {
 
             switch (id)
