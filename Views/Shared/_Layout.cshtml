@@ -7,6 +7,8 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <link href="~/Content/@MvcApplication.theme" rel="stylesheet" />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -36,6 +38,17 @@
                             <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.German, "Change", "Home", new { LanguageAbbrevation = "de-DE" }, null)</a>
                             <a class="dropdown-item">@Html.ActionLink(Library.Resources.SharedResource.English, "Change", "Home", new { LanguageAbbrevation = "en-US" }, null)</a>
                         </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Motyw
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li> <a class="link label-inverse navbar-link " href="/Home/Motyw?id=1" id="someID">Basic</a> </li>
+                            <li><a class="link label-inverse navbar-link" href="/Home/Motyw?id=2" id="someIDd">Color</a></li>
+                            <li><a class="link label-inverse navbar-link" href="/Home/Motyw?id=3" id="someIdD">Dark</a></li>
+                        </ul>
                     </li>
                 </ul>
                 @Html.Partial("_LoginPartial")

@@ -42,5 +42,27 @@ namespace Library.Controllers
             return View("Index");
 
         }
+        public ActionResult Motyw(int id)
+        {
+
+            switch (id)
+            {
+                case 1:
+                    MvcApplication.theme = "bootstrap.min.css";
+                    break;
+                case 2:
+                    MvcApplication.theme = "bootstrapcolor.min.css";
+                    break;
+
+                case 3:
+                    MvcApplication.theme = "bootstrapdark.min.css";
+                    break;
+            }
+
+
+            return RedirectToAction("Index", "Home");
+
+        }
+
     }
 }
