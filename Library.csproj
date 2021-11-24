@@ -240,6 +240,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublishingHouseController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="DAL\LibraryContext.cs" />
     <Compile Include="DAL\LibraryInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -257,6 +258,14 @@
     <Compile Include="Migrations\202111240046255_addNameAndSurname.Designer.cs">
       <DependentUpon>202111240046255_addNameAndSurname.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111240127247_role.cs" />
+    <Compile Include="Migrations\202111240127247_role.Designer.cs">
+      <DependentUpon>202111240127247_role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111240143490_roleAdd.cs" />
+    <Compile Include="Migrations\202111240143490_roleAdd.Designer.cs">
+      <DependentUpon>202111240143490_roleAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -264,6 +273,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -366,6 +376,11 @@
     <Content Include="Views\PublishingHouse\Details.cshtml" />
     <Content Include="Views\PublishingHouse\Edit.cshtml" />
     <Content Include="Views\PublishingHouse\Index.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Role\Details.cshtml" />
+    <Content Include="Views\Role\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -394,6 +409,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111240046255_addNameAndSurname.resx">
       <DependentUpon>202111240046255_addNameAndSurname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111240127247_role.resx">
+      <DependentUpon>202111240127247_role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111240143490_roleAdd.resx">
+      <DependentUpon>202111240143490_roleAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
