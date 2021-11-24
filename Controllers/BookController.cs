@@ -13,7 +13,7 @@ namespace Library.Controllers
 {
     public class BookController : Controller
     {
-        private LibraryContext db = new LibraryContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Book
         public ActionResult Index()

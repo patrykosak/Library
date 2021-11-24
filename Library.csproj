@@ -245,17 +245,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202110231454069_InitialCreate.cs" />
-    <Compile Include="Migrations\202110231454069_InitialCreate.Designer.cs">
-      <DependentUpon>202110231454069_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202111231725442_InitialCreate.cs" />
+    <Compile Include="Migrations\202111231725442_InitialCreate.Designer.cs">
+      <DependentUpon>202111231725442_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111182323138_init.cs" />
-    <Compile Include="Migrations\202111182323138_init.Designer.cs">
-      <DependentUpon>202111182323138_init.cs</DependentUpon>
+    <Compile Include="Migrations\202111240044408_initial.cs" />
+    <Compile Include="Migrations\202111240044408_initial.Designer.cs">
+      <DependentUpon>202111240044408_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111190009075_foreignKeys.cs" />
-    <Compile Include="Migrations\202111190009075_foreignKeys.Designer.cs">
-      <DependentUpon>202111190009075_foreignKeys.cs</DependentUpon>
+    <Compile Include="Migrations\202111240046255_addNameAndSurname.cs" />
+    <Compile Include="Migrations\202111240046255_addNameAndSurname.Designer.cs">
+      <DependentUpon>202111240046255_addNameAndSurname.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -386,14 +386,14 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202110231454069_InitialCreate.resx">
-      <DependentUpon>202110231454069_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111231725442_InitialCreate.resx">
+      <DependentUpon>202111231725442_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111182323138_init.resx">
-      <DependentUpon>202111182323138_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111240044408_initial.resx">
+      <DependentUpon>202111240044408_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111190009075_foreignKeys.resx">
-      <DependentUpon>202111190009075_foreignKeys.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111240046255_addNameAndSurname.resx">
+      <DependentUpon>202111240046255_addNameAndSurname.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
