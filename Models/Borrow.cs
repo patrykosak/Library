@@ -17,8 +17,10 @@ namespace Library.Models
         public int UserID { get; set; }
         public virtual ApplicationUser User { get; set; }
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime BorrowDate { get; set; }
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime RaturnDate { get; set; }
     }
 }

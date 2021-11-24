@@ -48,10 +48,11 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BorrowID,ISBN,UserID,BorrowDate,RaturnDate")] Borrow borrow)
+        public ActionResult Create([Bind(Include = "BorrowID,ISBN,UserID,RaturnDate")] Borrow borrow)
         {
             if (ModelState.IsValid)
             {
+                borrow.BorrowDate = DateTime.Now;
                 db.Borrows.Add(borrow);
                 db.SaveChanges();
                 return RedirectToAction("Index");
