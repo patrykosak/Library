@@ -17,7 +17,8 @@ namespace Library.Controllers
         // GET: Borrow
         public ActionResult Index()
         {
-            return View(db.Borrows.ToList());
+            var borrows = db.Borrows.Include(b => b.Book);
+            return View(borrows.ToList());
         }
 
         // GET: Borrow/Details/5
@@ -38,6 +39,7 @@ namespace Library.Controllers
         // GET: Borrow/Create
         public ActionResult Create()
         {
+            ViewBag.ISBN = new SelectList(db.Books, "ISBN", "Title");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BorrowID,BookID,UserID,BorrowDate,RaturnDate")] Borrow borrow)
+        public ActionResult Create([Bind(Include = "BorrowID,ISBN,UserID,BorrowDate,RaturnDate")] Borrow borrow)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace Library.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ISBN = new SelectList(db.Books, "ISBN", "Title", borrow.ISBN);
             return View(borrow);
         }
 
@@ -70,6 +73,7 @@ namespace Library.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ISBN = new SelectList(db.Books, "ISBN", "Title", borrow.ISBN);
             return View(borrow);
         }
 
@@ -78,7 +82,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BorrowID,BookID,UserID,BorrowDate,RaturnDate")] Borrow borrow)
+        public ActionResult Edit([Bind(Include = "BorrowID,ISBN,UserID,BorrowDate,RaturnDate")] Borrow borrow)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace Library.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ISBN = new SelectList(db.Books, "ISBN", "Title", borrow.ISBN);
             return View(borrow);
         }
 

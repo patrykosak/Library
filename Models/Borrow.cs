@@ -11,7 +11,7 @@ namespace Library.Models
         [Key]
         public int BorrowID { get; set; }
         [Required]
-        public int BookID { get; set; }
+        public int ISBN { get; set; }
         public virtual Book Book { get; set; }
         [Required]
         public int UserID { get; set; }

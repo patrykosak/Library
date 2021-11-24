@@ -271,6 +271,10 @@
     <Compile Include="Migrations\202111241350192_AddBorrow.Designer.cs">
       <DependentUpon>202111241350192_AddBorrow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111241355578_AddBorrows.cs" />
+    <Compile Include="Migrations\202111241355578_AddBorrows.Designer.cs">
+      <DependentUpon>202111241355578_AddBorrows.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -429,6 +433,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111241350192_AddBorrow.resx">
       <DependentUpon>202111241350192_AddBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111241355578_AddBorrows.resx">
+      <DependentUpon>202111241355578_AddBorrows.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
