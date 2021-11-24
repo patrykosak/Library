@@ -38,6 +38,7 @@ namespace Library.Models
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<PublishingHouse> PublishingHouses { get; set; }
+        public DbSet<Borrow> Borrows { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
