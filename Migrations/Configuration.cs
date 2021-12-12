@@ -11,6 +11,7 @@ namespace Library.Migrations
         {
             AutomaticMigrationsEnabled = false;
             ContextKey = "Library.Models.ApplicationDbContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Library.Models.ApplicationDbContext context)

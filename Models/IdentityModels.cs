@@ -43,5 +43,6 @@ namespace Library.Models
             return new ApplicationDbContext();
         }
 
+        public System.Data.Entity.DbSet<Library.Models.Category> Categories { get; set; }
     }
 }

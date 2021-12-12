@@ -237,6 +237,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublishingHouseController.cs" />
@@ -266,10 +267,15 @@
     <Compile Include="Migrations\202111240143490_roleAdd.Designer.cs">
       <DependentUpon>202111240143490_roleAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112122227533_addCategory.cs" />
+    <Compile Include="Migrations\202112122227533_addCategory.Designer.cs">
+      <DependentUpon>202112122227533_addCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
@@ -381,6 +387,11 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Details.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -415,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111240143490_roleAdd.resx">
       <DependentUpon>202111240143490_roleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112122227533_addCategory.resx">
+      <DependentUpon>202112122227533_addCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
