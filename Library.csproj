@@ -242,6 +242,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublishingHouseController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\SubcategoryController.cs" />
     <Compile Include="DAL\LibraryContext.cs" />
     <Compile Include="DAL\LibraryInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -271,6 +272,14 @@
     <Compile Include="Migrations\202112122227533_addCategory.Designer.cs">
       <DependentUpon>202112122227533_addCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112122232418_addSubcategory.cs" />
+    <Compile Include="Migrations\202112122232418_addSubcategory.Designer.cs">
+      <DependentUpon>202112122232418_addSubcategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112122236520_addSubcategory2.cs" />
+    <Compile Include="Migrations\202112122236520_addSubcategory2.Designer.cs">
+      <DependentUpon>202112122236520_addSubcategory2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -280,6 +289,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
+    <Compile Include="Models\Subcategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -392,6 +402,11 @@
     <Content Include="Views\Category\Details.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Subcategory\Create.cshtml" />
+    <Content Include="Views\Subcategory\Delete.cshtml" />
+    <Content Include="Views\Subcategory\Details.cshtml" />
+    <Content Include="Views\Subcategory\Edit.cshtml" />
+    <Content Include="Views\Subcategory\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -429,6 +444,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112122227533_addCategory.resx">
       <DependentUpon>202112122227533_addCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112122232418_addSubcategory.resx">
+      <DependentUpon>202112122232418_addSubcategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112122236520_addSubcategory2.resx">
+      <DependentUpon>202112122236520_addSubcategory2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

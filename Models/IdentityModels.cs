@@ -38,11 +38,14 @@ namespace Library.Models
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<PublishingHouse> PublishingHouses { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Subcategory> Subcategories { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<Library.Models.Category> Categories { get; set; }
+
     }
 }

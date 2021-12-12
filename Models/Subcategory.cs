@@ -6,12 +6,14 @@ using System.Web;
 
 namespace Library.Models
 {
-    public class Category
+    public class Subcategory
     {
         [Key]
-        public int CategoryID { get; set; }
+        public int SubcategoryID { get; set; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(500)]
         public string Name { get; set; }
+        public int CategoryID { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
