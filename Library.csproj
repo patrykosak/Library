@@ -238,6 +238,7 @@
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublishingHouseController.cs" />
@@ -280,11 +281,16 @@
     <Compile Include="Migrations\202112122236520_addSubcategory2.Designer.cs">
       <DependentUpon>202112122236520_addSubcategory2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112122256121_addFiles.cs" />
+    <Compile Include="Migrations\202112122256121_addFiles.Designer.cs">
+      <DependentUpon>202112122256121_addFiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\File.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
@@ -407,6 +413,11 @@
     <Content Include="Views\Subcategory\Details.cshtml" />
     <Content Include="Views\Subcategory\Edit.cshtml" />
     <Content Include="Views\Subcategory\Index.cshtml" />
+    <Content Include="Views\File\Create.cshtml" />
+    <Content Include="Views\File\Delete.cshtml" />
+    <Content Include="Views\File\Details.cshtml" />
+    <Content Include="Views\File\Edit.cshtml" />
+    <Content Include="Views\File\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -450,6 +461,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112122236520_addSubcategory2.resx">
       <DependentUpon>202112122236520_addSubcategory2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112122256121_addFiles.resx">
+      <DependentUpon>202112122256121_addFiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

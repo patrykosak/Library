@@ -23,7 +23,7 @@ namespace Library.Models
         public virtual Author Author { get; set; }
         public int publishingHouseID { get; set; }
         public virtual PublishingHouse PublishingHouse { get; set; }
-
+        public virtual ICollection<File> Files { get; set; }
 
     }
 }

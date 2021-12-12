@@ -46,6 +46,6 @@ namespace Library.Models
             return new ApplicationDbContext();
         }
 
-
+        public System.Data.Entity.DbSet<Library.Models.File> Files { get; set; }
     }
 }
