@@ -12,19 +12,14 @@ namespace Library.Controllers
     public class HomeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        public ActionResult Index(String searchString)
+        public ActionResult Index()
         {
 
-            ViewBag.bookList = db.Books.ToList();
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
                 var books = db.Books.ToList();
-                books = books.Where(b => b.Title.Contains(searchString) || b.Author.Name.Contains(searchString)
-                     || b.Author.Surname.Contains(searchString)
-                     || b.PublishingHouse.Name.Contains(searchString)).ToList();
+                books = books.OrderByDescending(b => b.ISBN).Take(3).ToList();
+
                 ViewBag.bookList = books;
-            }
+            
             return View();
         }
 
