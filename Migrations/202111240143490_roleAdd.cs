@@ -7,7 +7,7 @@ namespace Library.Migrations
     {
         public override void Up()
         {
-            DropTable("dbo.RoleViewModels");
+            
         }
         
         public override void Down()
