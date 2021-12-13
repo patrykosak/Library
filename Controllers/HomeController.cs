@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -10,8 +11,20 @@ namespace Library.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        { 
+        private ApplicationDbContext db = new ApplicationDbContext();
+        public ActionResult Index(String searchString)
+        {
+
+            ViewBag.bookList = db.Books.ToList();
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                var books = db.Books.ToList();
+                books = books.Where(b => b.Title.Contains(searchString) || b.Author.Name.Contains(searchString)
+                     || b.Author.Surname.Contains(searchString)
+                     || b.PublishingHouse.Name.Contains(searchString)).ToList();
+                ViewBag.bookList = books;
+            }
             return View();
         }
 
@@ -38,7 +51,7 @@ namespace Library.Controllers
             HttpCookie cookie = new HttpCookie("Language");
             cookie.Value = LanguageAbbrevation;
             Response.Cookies.Add(cookie);
-
+            ViewBag.bookList = db.Books.ToList();
             return View("Index");
 
         }
