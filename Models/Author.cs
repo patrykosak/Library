@@ -21,5 +21,9 @@ namespace Library.Models
         public DateTime BirthDate { get; set; }
         public virtual ICollection<Book> WrittenBooks { get; set; }
 
+        public string GetString()
+        {
+            return this.Name + " " + this.Surname;
+        }
     }
 }

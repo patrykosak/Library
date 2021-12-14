@@ -45,10 +45,10 @@
         @Html.DisplayFor(modelItem => item.Title)
     </td>
     <th>
-        @Html.DisplayFor(modelItem => item.Author)
+        @Html.DisplayFor(modelItem => item.Author.Name) &nbsp @Html.DisplayFor(modelItem => item.Author.Surname)
     </th>
     <td>
-        @Html.DisplayFor(modelItem => item.PublishingHouse)
+        @Html.DisplayFor(modelItem => item.PublishingHouse.Name)
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Amount)
