@@ -194,17 +194,17 @@ namespace Library.Controllers
             string userName = User.Identity.GetUserName();
 
             message.To.Add(new MailAddress(userName));
-            message.From = new MailAddress("weronika.sawicka.9@gmail.com");
+            message.From = new MailAddress("libraryemailsend@gmail.com");
             message.Subject = "Your email subject";
-            message.Body = string.Format(body, "Awesome bookshop", "", messageText);
+            message.Body = string.Format(body, "Library", "", messageText);
             message.IsBodyHtml = true;
 
             using (var smtp = new SmtpClient())
             {
                 var credential = new NetworkCredential
                 {
-                    UserName = "weronika.sawicka.9@gmail.com",
-                    Password = "Ptaszysko04464"
+                    UserName = "libraryemailsend@gmail.com",
+                    Password = "Starekt1!"
                 };
                 smtp.Credentials = credential;
                 smtp.Host = "smtp.gmail.com";
@@ -213,7 +213,7 @@ namespace Library.Controllers
                 await smtp.SendMailAsync(message);
             }
 
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
 
 
             foreach (CartItem item in cart)
@@ -230,8 +230,7 @@ namespace Library.Controllers
             zamowienie.Cart = koszyk;
             zamowienie.userId = User.Identity.GetUserId();
             zamowienie.status = "Nowe";
-            string user = User.Identity.GetUserId();
-            //Address query = db.Adresses.Where(x => x.userId == user).FirstOrDefault<Address>();
+
             db.Orders.Add(zamowienie);
             db.SaveChanges();
 
