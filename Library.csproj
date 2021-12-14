@@ -243,6 +243,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublishingHouseController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\SubcategoryController.cs" />
     <Compile Include="DAL\LibraryContext.cs" />
     <Compile Include="DAL\LibraryInitializer.cs" />
@@ -285,14 +286,21 @@
     <Compile Include="Migrations\202112122256121_addFiles.Designer.cs">
       <DependentUpon>202112122256121_addFiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112141337068_addCartAndOrder.cs" />
+    <Compile Include="Migrations\202112141337068_addCartAndOrder.Designer.cs">
+      <DependentUpon>202112141337068_addCartAndOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\File.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Models\Subcategory.cs" />
@@ -419,6 +427,10 @@
     <Content Include="Views\File\Edit.cshtml" />
     <Content Include="Views\File\Index.cshtml" />
     <Content Include="Views\Book\SearchBook.cshtml" />
+    <Content Include="Views\ShoppingCart\Cart.cshtml" />
+    <Content Include="Views\ShoppingCart\CartBin.cshtml" />
+    <Content Include="Views\ShoppingCart\Order.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -465,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112122256121_addFiles.resx">
       <DependentUpon>202112122256121_addFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112141337068_addCartAndOrder.resx">
+      <DependentUpon>202112141337068_addCartAndOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

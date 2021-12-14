@@ -1,27 +1,29 @@
 ﻿@model IEnumerable<Library.Models.Book>
 
-@{
-    ViewBag.Title = "Index";
-}
+@using Microsoft.AspNet.Identity;
+<link href="~/Content/PagedList.css" rel="stylesheet"
+      type="text/css" />
+@{ ViewBag.Title = "Index"; }
 
-<h2>Index</h2>
+<h2>Books</h2>
+
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>}
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Author.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PublishingHouse.Name)
-        </th>
+        <th></th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PublicYear)
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublishingHouse)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Amount)
@@ -29,29 +31,51 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishingHouse.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublicYear)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Amount)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ISBN }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ISBN }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ISBN })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @*<div class="col-md-10">
+            @if (item.Pictures.Count > 0)
+            {
+<img src="@Html.DisplayFor(modelItem => item.Pictures.ElementAt(0).Address)" alt="HTML% Icon" style="width:110px;height:110px" />                }
+        </div>*@
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+    <th>
+        @Html.DisplayFor(modelItem => item.Author)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.PublishingHouse)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Amount)
+    </td>
+    <td>
+        @using (Html.BeginForm("OrderNow", "ShoppingCart", FormMethod.Post))
+        {
+@Html.TextBox("quantity", null, new { type = "number", style = "width:35px", min = "0", @Value = "1" })
+                    @Html.Hidden("id", item.ISBN)
+                                        <button type="submit" class="btn btn-danger">Add</button>}
+    </td>
+    <td>
+        @Html.ActionLink("Details", "Details", new { id = item.ISBN }, new { @class = "btn btn-warning" })
+
+
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+@Html.ActionLink("Edit", "Edit", new { id = item.ISBN }, new { @class = "btn btn-danger" })}
+
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+@Html.ActionLink("Delete", "Delete", new { id = item.ISBN }, new { @class = "btn btn-primary" })}
+
+
+
+
+    </td>
+</tr>}
 
 </table>

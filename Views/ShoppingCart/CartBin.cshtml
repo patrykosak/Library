@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "CartBin";
+}
+@using Library.Models;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <h2>CartBin</h2>
+    <h2>Index</h2>
+    <table class="table-condensed">
+        <tr>
+            <th>ISBN</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+        </tr>
+        @{
+            double s = 0;
+        }
+        @if ((List<CartItem>)Session["cartbin"] != null)
+        {
+            foreach (CartItem item in (List<CartItem>)Session["cartbin"])
+            {
+                //s += item.Product.Price * item.Quantity;
+            <tr>
+                <th>@item.Book.ISBN</th>
+                <th>@item.Book.Title</th>
+                <th>@item.Book.Author</th>
+                <th>@item.Quantity</th>
+                @*<th>@(item.Quantity * item.Product.Price) zł</th>*@
+                <th>@Html.ActionLink("Order Now", "OrderNow2", "ShoppingCart", new { id = item.Book.ISBN, amount = item.Quantity }, new { @class = "btn btn-warning" })</th>
+
+              
+
+            </tr>
+            }
+        }
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th align="right">Sum: </th>
+            <td>@s zł</td>
+        </tr>
+    </table>
+    <br /><br />   
+    @Html.ActionLink("Continue Shopping", "Index", "Products")
+    <br /><br />
+    @Html.ActionLink("Cart", "Index", "ShoppingCart")
+</body>
+
+</html>
