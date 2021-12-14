@@ -92,7 +92,7 @@ namespace Library.Controllers
             {
 
                 List<CartItem> cart = new List<CartItem>();
-                cart.Add(new CartItem(db.Books.Find(id), quantity));
+                cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(s => s.ISBN == id), quantity));
                 Session["cart"] = cart;
 
             }
@@ -101,7 +101,7 @@ namespace Library.Controllers
                 List<CartItem> cart = (List<CartItem>)Session["cart"];
                 int index = isExisting(id);
                 if (index == -1)
-                    cart.Add(new CartItem(db.Books.Find(id), quantity));
+                    cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(s => s.ISBN == id), quantity));
                 else
                     cart[index].Quantity += quantity;
                 Session["cart"] = cart;
@@ -120,7 +120,7 @@ namespace Library.Controllers
             {
 
                 List<CartItem> cart = new List<CartItem>();
-                cart.Add(new CartItem(db.Books.Find(id), (int)amount));
+                cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(s => s.ISBN == id), (int)amount));
                 Session["cart"] = cart;
 
             }
@@ -129,7 +129,7 @@ namespace Library.Controllers
                 List<CartItem> cart = (List<CartItem>)Session["cart"];
                 int index = isExisting((int)id);
                 if (index == -1)
-                    cart.Add(new CartItem(db.Books.Find(id), (int)amount));
+                    cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(s => s.ISBN == id), (int)amount));
                 else
                     cart[index].Quantity += (int)amount;
                 Session["cart"] = cart;
@@ -149,7 +149,7 @@ namespace Library.Controllers
             {
 
                 List<CartItem> cartbin = new List<CartItem>();
-                cartbin.Add(new CartItem(db.Books.Find(id), quantity));
+                cartbin.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(s => s.ISBN == id), quantity));
                 Session["cartbin"] = cartbin;
 
             }
@@ -158,7 +158,7 @@ namespace Library.Controllers
                 List<CartItem> cartbin = (List<CartItem>)Session["cartbin"];
                 int index2 = isExisting2(id);
                 if (index2 == -1)
-                    cartbin.Add(new CartItem(db.Books.Find(id), quantity));
+                    cartbin.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(s => s.ISBN == id), quantity));
                 else
                     cartbin[index2].Quantity += quantity;
                 Session["cartbin"] = cartbin;
@@ -175,7 +175,7 @@ namespace Library.Controllers
             Cart koszyk = new Cart();
             foreach (CartItem item in cart)
             {
-                var e = db.Books.Where(x => x.ISBN == item.ISBN).FirstOrDefault();
+                var e = db.Books.AsNoTracking().Where(x => x.ISBN == item.ISBN).FirstOrDefault();
                 if (e != null)
                 {
                     e.Amount -= item.Quantity;
@@ -222,13 +222,14 @@ namespace Library.Controllers
                 //db.CartItems.Add(item);
             }
             koszyk.CartItems = cart;
-            koszyk.userId = User.Identity.GetUserId();
-            //db.Cart.Add(koszyk);
-            //db.SaveChanges();
+            String userID = User.Identity.GetUserId();
+            koszyk.userId = userID;
+            db.Cart.Add(koszyk);
+            db.SaveChanges();
             Order zamowienie = new Order();
 
-            zamowienie.Cart = koszyk;
-            zamowienie.userId = User.Identity.GetUserId();
+            zamowienie.CartID = koszyk.CartID;
+            zamowienie.userId = userID;
             zamowienie.status = "Nowe";
 
             db.Orders.Add(zamowienie);
