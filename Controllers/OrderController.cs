@@ -89,6 +89,16 @@ namespace Library.Controllers
         {
             if (ModelState.IsValid)
             {
+                List<CartItem> books = db.CartItems.Where(c => c.CartID == order.CartID).ToList();
+                if (order.status == Status.received)
+                {
+                    foreach(var item in books)
+                    {
+                        var book = db.Books.Where(b => b.ISBN == item.ISBN).FirstOrDefault();
+                        book.Amount--;
+                        db.SaveChanges();
+                    }
+                }
                 db.Entry(order).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
