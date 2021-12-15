@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,6 @@ namespace Library.Models
 {
     public class CartItem
     {
-
         [Key]
         public int ItemID { get; set; }
 
@@ -24,6 +24,7 @@ namespace Library.Models
 
         public CartItem(Book book, int quantity)
         {
+
             this.Book = book;
             this.Quantity = quantity;
         }

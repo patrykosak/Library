@@ -19,20 +19,16 @@
             <th>Quantity</th>
             <th>Sub Total</th>
         </tr>
-        @{
-        double s = 0;
-        }
+
         @if ((List<CartItem>)Session["cart"] != null)
         {
         foreach (CartItem item in (List<CartItem>)Session["cart"])
         {
-            //s += item.Product.Price * item.Quantity;
             <tr>
                 <th>@item.Book.ISBN</th>
                 <th>@item.Book.Title</th>
                 <th>@item.Book.Title</th>
                 <th>@item.Quantity</th>
-                @*<th>@(item.Quantity * item.Product.Price) zł</th>*@   
                 <th style="border:none">
                  @using (Html.BeginForm("Remove", "ShoppingCart", FormMethod.Post))
                  {
@@ -45,15 +41,9 @@
             </tr>
         }
         }
-        <tr>
-            <th></th><th></th><th></th><th align="right">Sum: </th>
-            <td>@s zł</td>
-        </tr>
     </table>
     <br /><br />
-    @Html.ActionLink("Continue Shopping", "Index", "Products")
-    <br /><br />
-    @Html.ActionLink("See Cart Bin", "CartBin", "ShoppingCart")
+    @Html.ActionLink("Continue Shopping", "Index", "Book")
     <br /><br />
     @Html.ActionLink("MakeAnOrder", "MakeAnOrder", "ShoppingCart") 
 </body>

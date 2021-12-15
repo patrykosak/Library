@@ -56,9 +56,9 @@
     <td>
         @using (Html.BeginForm("OrderNow", "ShoppingCart", FormMethod.Post))
         {
-@Html.TextBox("quantity", null, new { type = "number", style = "width:35px", min = "0", @Value = "1" })
-                    @Html.Hidden("id", item.ISBN)
-                                        <button type="submit" class="btn btn-danger">Add</button>}
+                        @Html.Hidden("quantity", 1)
+                        @Html.Hidden("id", item.ISBN)
+                        <button type="submit" class="btn btn-danger">Add</button>}
     </td>
     <td>
         @Html.ActionLink("Details", "Details", new { id = item.ISBN }, new { @class = "btn btn-warning" })
