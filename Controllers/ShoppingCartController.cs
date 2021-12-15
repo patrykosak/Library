@@ -184,36 +184,36 @@ namespace Library.Controllers
             }
 
             //sending email
-            String messageText = "";
-            foreach (CartItem item in cart)
-            {
-                messageText += item.GetString();
-            }
-            var body = "<h2>Email From: {0} about rented products ({1})</h2></br><p>Message:</p><p>{2}</p>";
-            var message = new MailMessage();
-            string userName = User.Identity.GetUserName();
+            //String messageText = "";
+            //foreach (CartItem item in cart)
+            //{
+            //    messageText += item.GetString();
+            //}
+            //var body = "<h2>Email From: {0} about rented products ({1})</h2></br><p>Message:</p><p>{2}</p>";
+            //var message = new MailMessage();
+            //string userName = User.Identity.GetUserName();
 
-            message.To.Add(new MailAddress(userName));
-            message.From = new MailAddress("libraryemailsend@gmail.com");
-            message.Subject = "Your email subject";
-            message.Body = string.Format(body, "Library", "", messageText);
-            message.IsBodyHtml = true;
+            //message.To.Add(new MailAddress(userName));
+            //message.From = new MailAddress("libraryemailsend@gmail.com");
+            //message.Subject = "Your email subject";
+            //message.Body = string.Format(body, "Library", "", messageText);
+            //message.IsBodyHtml = true;
 
-            using (var smtp = new SmtpClient())
-            {
-                var credential = new NetworkCredential
-                {
-                    UserName = "libraryemailsend@gmail.com",
-                    Password = "Starekt1!"
-                };
-                smtp.Credentials = credential;
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
-                smtp.EnableSsl = true;
-                await smtp.SendMailAsync(message);
-            }
+            //using (var smtp = new SmtpClient())
+            //{
+            //    var credential = new NetworkCredential
+            //    {
+            //        UserName = "libraryemailsend@gmail.com",
+            //        Password = "Starekt1!"
+            //    };
+            //    smtp.Credentials = credential;
+            //    smtp.Host = "smtp.gmail.com";
+            //    smtp.Port = 587;
+            //    smtp.EnableSsl = true;
+            //    await smtp.SendMailAsync(message);
+            //}
 
-            System.Threading.Thread.Sleep(1000);
+            //System.Threading.Thread.Sleep(1000);
 
 
             foreach (CartItem item in cart)
