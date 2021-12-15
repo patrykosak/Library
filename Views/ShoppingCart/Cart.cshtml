@@ -1,6 +1,4 @@
-﻿@{
-    ViewBag.Title = "Cart";
-}
+﻿@{ ViewBag.Title = "Cart"; }
 @using Library.Models;
 <!DOCTYPE html>
 <html>
@@ -22,30 +20,39 @@
 
         @if ((List<CartItem>)Session["cart"] != null)
         {
-        foreach (CartItem item in (List<CartItem>)Session["cart"])
-        {
-            <tr>
-                <th>@item.Book.ISBN</th>
-                <th>@item.Book.Title</th>
-                <th>@item.Book.Title</th>
-                <th>@item.Quantity</th>
-                <th style="border:none">
-                 @using (Html.BeginForm("Remove", "ShoppingCart", FormMethod.Post))
-                 {
-                    @Html.Hidden("id", item.Book.ISBN)
-                    @Html.Hidden("quantity", item.Quantity)
-                    <button type="submit" class="btn btn-danger">Remove</button>
-                 }
+            List<String> titles = (List<String>)Session["titles"];
+            int i = 0;
+            foreach (CartItem item in (List<CartItem>)Session["cart"])
+            {
 
+<tr>
+    <th>@item.ISBN</th>
+
+    
+    <th>
+        @titles[i]
+        @{i++;
+        }
     </th>
-            </tr>
-        }
-        }
+
+        
+    <th></th>
+    <th>@item.Quantity</th>
+    <th style="border:none">
+        @using (Html.BeginForm("Remove", "ShoppingCart", FormMethod.Post))
+        {
+@Html.Hidden("id", item.ISBN)
+                        @Html.Hidden("quantity", item.Quantity)
+                                                <button type="submit" class="btn btn-danger">Remove</button>}
+        
+    </th>
+</tr>}
+            }
     </table>
     <br /><br />
     @Html.ActionLink("Continue Shopping", "Index", "Book")
     <br /><br />
-    @Html.ActionLink("MakeAnOrder", "MakeAnOrder", "ShoppingCart") 
+    @Html.ActionLink("MakeAnOrder", "MakeAnOrder", "ShoppingCart")
 </body>
 
 </html>

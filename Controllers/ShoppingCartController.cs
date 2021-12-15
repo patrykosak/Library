@@ -26,13 +26,13 @@ namespace Library.Controllers
         {
             List<CartItem> cart = (List<CartItem>)Session["cart"];
             for (int i = 0; i < cart.Count; i++)
-                if (cart[i].Book.ISBN == id)
+                if (cart[i].ISBN == id)
                     return i;
             return -1;
 
         }
 
-        public ActionResult OrderNow([Optional] int id, [Optional] int quantity) //Add to cart
+        public ActionResult OrderNow([Optional] int id, [Optional] string title, [Optional] int quantity) //Add to cart
         {
             if (quantity == 0 || id == 0)
             {
@@ -43,23 +43,30 @@ namespace Library.Controllers
             {
 
                 List<CartItem> cart = new List<CartItem>();
-                cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(b => b.ISBN == id), 1));
-                //cart.Add(new CartItem(id, 1));
+                List<String> titles = new List<String>();
+                //cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(b => b.ISBN == id), 1));
+                cart.Add(new CartItem(id, 1));
+                titles.Add(title);
                 Session["cart"] = cart;
-
+                Session["titles"] = titles;
             }
             else
             {
                 List<CartItem> cart = (List<CartItem>)Session["cart"];
+                List<String> titles = (List<String>)Session["titles"];
                 int index = isExisting(id);
                 if (index == -1)
                 {
-                    cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(b => b.ISBN == id), 1));
+                    //cart.Add(new CartItem(db.Books.AsNoTracking().FirstOrDefault(b => b.ISBN == id), 1));
+                    cart.Add(new CartItem(id, 1));
+                    titles.Add(title);
                 }
-                //cart.Add(new CartItem(id, 1));
                 else
+                {
                     Session["cart"] = cart;
-                Session["licz"] = cart.Count;
+                    Session["titles"] = titles;
+                }
+                    Session["licz"] = cart.Count;
             }
             return View("Cart");
         }
@@ -68,11 +75,13 @@ namespace Library.Controllers
         {
             int index = isExisting(id);
             List<CartItem> cart = (List<CartItem>)Session["cart"];
-
+            List<String> titles = (List<String>)Session["titles"];
 
             if (index != -1) {
                 cart.RemoveAt(index);
+                titles.RemoveAt(index);
                 Session["cart"] = cart;
+                Session["titles"] = titles;
             }
             return View("Cart");
         }
@@ -143,6 +152,7 @@ namespace Library.Controllers
             db.Orders.Add(zamowienie);
             db.SaveChanges();
             Session["cart"] = null;
+            Session["titles"] = null;
             Session["licz"] = 0;
 
             return View("Cart");

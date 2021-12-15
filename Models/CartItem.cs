@@ -22,10 +22,10 @@ namespace Library.Models
 
         public int Quantity { get; set; }
 
-        public CartItem(Book book, int quantity)
+        public CartItem(int ISBN, int quantity)
         {
 
-            this.Book = book;
+            this.ISBN = ISBN;
             this.Quantity = quantity;
         }
         public CartItem()
