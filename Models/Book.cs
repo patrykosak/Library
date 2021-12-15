@@ -24,6 +24,7 @@ namespace Library.Models
         public int publishingHouseID { get; set; }
         public virtual PublishingHouse PublishingHouse { get; set; }
         public virtual ICollection<File> Files { get; set; }
+        public virtual ICollection<Picture> Pictures { get; set; }
 
     }
 }

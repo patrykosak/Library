@@ -242,6 +242,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\PublishingHouseController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
@@ -291,6 +292,10 @@
     <Compile Include="Migrations\202112141337068_addCartAndOrder.Designer.cs">
       <DependentUpon>202112141337068_addCartAndOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112152134291_addPicturesToBook.cs" />
+    <Compile Include="Migrations\202112152134291_addPicturesToBook.Designer.cs">
+      <DependentUpon>202112152134291_addPicturesToBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -302,6 +307,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Picture.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Models\Subcategory.cs" />
@@ -436,6 +442,11 @@
     <Content Include="Views\Order\Details.cshtml" />
     <Content Include="Views\Order\Edit.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Picture\Create.cshtml" />
+    <Content Include="Views\Picture\Delete.cshtml" />
+    <Content Include="Views\Picture\Details.cshtml" />
+    <Content Include="Views\Picture\Edit.cshtml" />
+    <Content Include="Views\Picture\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -485,6 +496,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112141337068_addCartAndOrder.resx">
       <DependentUpon>202112141337068_addCartAndOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112152134291_addPicturesToBook.resx">
+      <DependentUpon>202112152134291_addPicturesToBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
