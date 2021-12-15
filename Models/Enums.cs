@@ -11,6 +11,8 @@ namespace Library.Models
         [Display(Name = "Nowe zamówienie")]
         newOrder,
         [Display(Name = "Odebrana")]
-        received
+        received,
+        [Display(Name = "Zwrócona")]
+        returned
     }
 }
