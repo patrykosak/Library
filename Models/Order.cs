@@ -11,7 +11,7 @@ namespace Library.Models
         [Key]
         public int OrderID { get; set; }
 
-        public string status { get; set; }
+        public Status status { get; set; }
 
         public virtual Cart Cart { get; set; }
 

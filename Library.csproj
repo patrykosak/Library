@@ -297,6 +297,10 @@
     <Compile Include="Migrations\202112152134291_addPicturesToBook.Designer.cs">
       <DependentUpon>202112152134291_addPicturesToBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112152156263_addEnumStatus.cs" />
+    <Compile Include="Migrations\202112152156263_addEnumStatus.Designer.cs">
+      <DependentUpon>202112152156263_addEnumStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -304,6 +308,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\File.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -438,11 +443,6 @@
     <Content Include="Views\ShoppingCart\Cart.cshtml" />
     <Content Include="Views\ShoppingCart\Order.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
-    <Content Include="Views\Order\Create.cshtml" />
-    <Content Include="Views\Order\Delete.cshtml" />
-    <Content Include="Views\Order\Details.cshtml" />
-    <Content Include="Views\Order\Edit.cshtml" />
-    <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Picture\Create.cshtml" />
     <Content Include="Views\Picture\Delete.cshtml" />
     <Content Include="Views\Picture\Details.cshtml" />
@@ -453,6 +453,11 @@
     <Content Include="Views\CartItem\Details.cshtml" />
     <Content Include="Views\CartItem\Edit.cshtml" />
     <Content Include="Views\CartItem\Index.cshtml" />
+    <Content Include="Views\Order\Create.cshtml" />
+    <Content Include="Views\Order\Delete.cshtml" />
+    <Content Include="Views\Order\Details.cshtml" />
+    <Content Include="Views\Order\Edit.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -505,6 +510,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112152134291_addPicturesToBook.resx">
       <DependentUpon>202112152134291_addPicturesToBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112152156263_addEnumStatus.resx">
+      <DependentUpon>202112152156263_addEnumStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,7 +7,6 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Library.Models;
-using Microsoft.AspNet.Identity;
 
 namespace Library.Controllers
 {
@@ -18,8 +17,7 @@ namespace Library.Controllers
         // GET: Order
         public ActionResult Index()
         {
-            String userID = User.Identity.GetUserId();
-            var orders = db.Orders.Include(o => o.Cart).Include(o => o.User).Where(o => o.userId == userID);
+            var orders = db.Orders.Include(o => o.Cart).Include(o => o.User);
             return View(orders.ToList());
         }
 
@@ -77,8 +75,8 @@ namespace Library.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CartID = new SelectList(db.Cart, "CartID", "userId", order.CartID);
-            ViewBag.userId = new SelectList(db.ApplicationUsers, "Id", "Name", order.userId);
+            //ViewBag.CartID = new SelectList(db.Cart, "CartID", "userId", order.CartID);
+            //ViewBag.userId = new SelectList(db.ApplicationUsers, "Id", "Name", order.userId);
             return View(order);
         }
 

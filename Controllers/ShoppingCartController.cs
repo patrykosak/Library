@@ -146,7 +146,7 @@ namespace Library.Controllers
 
             zamowienie.Cart = koszyk;
             zamowienie.userId = userID;
-            zamowienie.status = "Nowe";
+            zamowienie.status = Status.newOrder;
 
 
             db.Orders.Add(zamowienie);
