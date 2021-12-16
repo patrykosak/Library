@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Library.Models;
+using System.Collections.Generic;
 
 namespace Library.Controllers
 {
@@ -15,15 +16,29 @@ namespace Library.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationRoleManager _roleManager;
 
         public ManageController()
         {
         }
 
-        public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+        public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, ApplicationRoleManager roleManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            RoleManager = roleManager;
+        }
+
+        public ApplicationRoleManager RoleManager
+        {
+            get
+            {
+                return _roleManager ?? HttpContext.GetOwinContext().Get<ApplicationRoleManager>();
+            }
+            private set
+            {
+                _roleManager = value;
+            }
         }
 
         public ApplicationSignInManager SignInManager
@@ -239,6 +254,43 @@ namespace Library.Controllers
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                 }
                 return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
+            }
+            AddErrors(result);
+            return View(model);
+        }
+
+        //
+        // GET: /Manage/ChangePassword
+        public ActionResult ChangeRole()
+        {
+            List<SelectListItem> listRoles = new List<SelectListItem>();
+            foreach (var role in RoleManager.Roles)
+                listRoles.Add(new SelectListItem() { Value = role.Name, Text = role.Name });
+            ViewBag.Roles = listRoles;
+
+            List<SelectListItem> listUsers = new List<SelectListItem>();
+            foreach (var user in UserManager.Users)
+                listUsers.Add(new SelectListItem() { Value = user.Id, Text = user.Id });
+            ViewBag.Users = listUsers;
+            return View();
+        }
+
+        //
+        // POST: /Manage/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangeRole(ChangeRoleViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result = await UserManager.RemoveFromRolesAsync(model.UserID);
+            if (result.Succeeded)
+            {
+                var user = await UserManager.AddToRoleAsync(model.UserID,model.RoleName);
+             
+                return RedirectToAction("Index", new { Message = "Change Role success" });
             }
             AddErrors(result);
             return View(model);

@@ -58,6 +58,17 @@ namespace Library.Models
         public string ConfirmPassword { get; set; }
     }
 
+    public class ChangeRoleViewModel
+    {
+        [Required]
+        [Display(Name = "User ID")]
+        public string UserID { get; set; }
+
+        [Required]
+        [Display(Name = "New Role")]
+        public string RoleName { get; set; }
+    }
+
     public class AddPhoneNumberViewModel
     {
         [Required]
