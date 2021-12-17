@@ -305,7 +305,7 @@ namespace Library.Controllers
             {
                 if (user.EmailConfirmed == false)
                 {
-                    listRoles.Add(new SelectListItem() { Value = user.Id, Text = user.Name +" " + user.Surname });
+                    listRoles.Add(new SelectListItem() { Value = user.Id, Text = user.Email });
                 }
                 }
                 ViewBag.Users = listRoles;
@@ -338,7 +338,7 @@ namespace Library.Controllers
             List<SelectListItem> listRoles = new List<SelectListItem>();
             foreach (var user in UserManager.Users)
             {
-                    listRoles.Add(new SelectListItem() { Value = user.Id, Text = user.Name + " " + user.Surname });
+                    listRoles.Add(new SelectListItem() { Value = user.Id, Text = user.Email });
             }
             ViewBag.Users = listRoles;
             return View();
