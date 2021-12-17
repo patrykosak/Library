@@ -460,6 +460,7 @@
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Manage\ChangeRole.cshtml" />
     <Content Include="Views\Manage\ConfirmUser.cshtml" />
+    <Content Include="Views\Manage\DeleteUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

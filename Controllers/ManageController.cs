@@ -333,7 +333,36 @@ namespace Library.Controllers
             return View(model);
         }
 
+        public ActionResult DeleteUser()
+        {
+            List<SelectListItem> listRoles = new List<SelectListItem>();
+            foreach (var user in UserManager.Users)
+            {
+                    listRoles.Add(new SelectListItem() { Value = user.Id, Text = user.Name + " " + user.Surname });
+            }
+            ViewBag.Users = listRoles;
+            return View();
+        }
 
+        //
+        // POST: /Manage/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> DeleteUser(DeleteUserViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result = await UserManager.DeleteAsync(UserManager.FindById(model.UserID));
+            if (result.Succeeded)
+            {
+
+                return RedirectToAction("Index", new { Message = "delete User success" });
+            }
+            AddErrors(result);
+            return View(model);
+        }
 
         //
         // GET: /Manage/SetPassword

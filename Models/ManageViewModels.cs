@@ -76,7 +76,13 @@ namespace Library.Models
 
     }
 
+    public class DeleteUserViewModel
+    {
+        [Required]
+        [Display(Name = "User ID")]
+        public string UserID { get; set; }
 
+    }
 
     public class AddPhoneNumberViewModel
     {
