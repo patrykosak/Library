@@ -68,6 +68,15 @@ namespace Library.Models
         [Display(Name = "New Role")]
         public string RoleName { get; set; }
     }
+    public class ConfirmUserViewModel
+    {
+        [Required]
+        [Display(Name = "User ID")]
+        public string UserID { get; set; }
+
+    }
+
+
 
     public class AddPhoneNumberViewModel
     {

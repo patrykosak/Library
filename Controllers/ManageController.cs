@@ -297,6 +297,45 @@ namespace Library.Controllers
         }
 
         //
+        // GET: /Manage/ChangePassword
+        public ActionResult ConfirmUser()
+        {
+            List<SelectListItem> listRoles = new List<SelectListItem>();
+            foreach (var user in UserManager.Users)
+            {
+                if (user.EmailConfirmed == false)
+                {
+                    listRoles.Add(new SelectListItem() { Value = user.Id, Text = user.Name +" " + user.Surname });
+                }
+                }
+                ViewBag.Users = listRoles;
+            return View();
+        }
+
+        //
+        // POST: /Manage/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ConfirmUser(ConfirmUserViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var token = await UserManager.GenerateEmailConfirmationTokenAsync(model.UserID);
+            var result = await UserManager.ConfirmEmailAsync(model.UserID, token);
+            if (result.Succeeded)
+            {
+
+                return RedirectToAction("Index", new { Message = "Confirm User success" });
+            }
+            AddErrors(result);
+            return View(model);
+        }
+
+
+
+        //
         // GET: /Manage/SetPassword
         public ActionResult SetPassword()
         {

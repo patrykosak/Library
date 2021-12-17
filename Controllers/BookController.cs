@@ -55,6 +55,7 @@ namespace Library.Controllers
         }
 
         // GET: Book/Create
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Create()
         {
             ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name");
@@ -67,6 +68,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Create([Bind(Include = "ISBN,Title,PublicYear,Amount,AuthorID,publishingHouseID")] Book book)
         {
             if (ModelState.IsValid)
