@@ -56,10 +56,18 @@ namespace Library.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult SearchBookByCategory(SearchBookByCategoryViewModel model)
-        { 
-
+        {
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var category in db.Categories)
+            {
+                list.Add(new SelectListItem() { Value = category.Name, Text = category.Name });
+            }
+            foreach (var subcategory in db.Subcategories)
+            {
+                list.Add(new SelectListItem() { Value = subcategory.Name, Text = subcategory.Name });
+            }
+            ViewBag.categories = list;
             if (!String.IsNullOrEmpty(model.selectedCategory))
             {
                 var books = db.Books.ToList();
@@ -86,16 +94,22 @@ namespace Library.Controllers
         }
 
         // GET: Book/Create
-        [Authorize(Roles = "Admin,Worker")]
+        //[Authorize(Roles = "Admin,Worker")]
         public ActionResult Create()
         {
             ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name");
             List<SelectListItem> list = new List<SelectListItem>();
+            List<SelectListItem> list2 = new List<SelectListItem>();
             foreach (var publishingHouse in db.PublishingHouses)
             {
                     list.Add(new SelectListItem() { Value = publishingHouse.publishingHouseID.ToString(), Text = publishingHouse.Name });
             }
+            foreach (var subcategory in db.Subcategories)
+            {
+                list2.Add(new SelectListItem() { Value = subcategory.SubcategoryID.ToString(), Text = subcategory.Name });
+            }
             ViewBag.publishingHouseID = list;
+            ViewBag.SubcategoryID = list2;
             return View();
         }
 
@@ -104,8 +118,8 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin,Worker")]
-        public ActionResult Create([Bind(Include = "ISBN,Title,PublicYear,Amount,AuthorID,publishingHouseID")] Book book)
+        //[Authorize(Roles = "Admin,Worker")]
+        public ActionResult Create([Bind(Include = "ISBN,Title,PublicYear,Amount,AuthorID,SubcategoryID,publishingHouseID")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -115,6 +129,7 @@ namespace Library.Controllers
             }
 
             ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name", book.AuthorID);
+            ViewBag.SubcategoryID = new SelectList(db.Subcategories, "SubcategoryID", "Name", book.SubcategoryID);
             ViewBag.publishingHouseID = new SelectList(db.PublishingHouses, "publishingHouseID", "Name", book.publishingHouseID);
             return View(book);
         }
