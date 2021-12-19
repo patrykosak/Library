@@ -4,50 +4,56 @@
 }
 
 @using Library.Models;
-<div class="jumbotron">
-    <h1>@Library.Resources.SharedResource.Library</h1>
-</div>
+@model Library.Models.SearchBookByCategoryViewModel
 
-<div class="row">
 
-    <div class="input-group input-group-sm">
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                Find: @Html.TextBox("SearchString")
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-        </form>
+    <div class="jumbotron">
+        <h1>@Library.Resources.SharedResource.Library</h1>
     </div>
 
-    <h2>@ViewBag.Title</h2>
-    <table cellpadding="8" cellspacing="10" class="table">
+    <div class="row">
 
-        <tr>
+        <div class="input-group input-group-sm">
+            @using (Html.BeginForm("SearchBookByCategory", "Book", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        Find: @Html.DropDownListFor(m => m.selectedCategory, new SelectList(ViewBag.categories, "Value", "Text"), new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            }
+            </div>
 
-            <th>ISBN</th>
-            <th>Title </th>
-            <th>Author</th>
-            <th>Publishing House</th>
-            <th></th>
+        <h2>@ViewBag.Title</h2>
+        <table cellpadding="8" cellspacing="10" class="table">
 
-        </tr>
-        @foreach (Book book in ViewBag.bookList)
-        {
             <tr>
-                <th> @book.ISBN </th>
-                <th> @book.Title </th>
-                <th>
 
-                    @book.Author.Name<a> </a>@book.Author.Surname
-                </th>
-                <th> @book.PublishingHouse.Name </th>
+                <th>ISBN</th>
+                <th>Title </th>
+                <th>Author</th>
+                <th>Publishing House</th>
+                <th></th>
 
             </tr>
-       }
+            @foreach (Book book in ViewBag.bookList)
+            {
+                <tr>
+                    <th> @book.ISBN </th>
+                    <th> @book.Title </th>
+                    <th>
 
-    </table>
+                        @book.Author.Name<a> </a>@book.Author.Surname
+                    </th>
+                    <th> @book.PublishingHouse.Name </th>
 
-    <div class="col-md-4">
+                </tr>
+            }
 
+        </table>
+
+        <div class="col-md-4">
+
+        </div>
     </div>
-</div>

@@ -76,6 +76,14 @@ namespace Library.Models
 
     }
 
+    public class SearchBookByCategoryViewModel
+    {
+        [Required]
+        [Display(Name = "Category name")]
+        public string selectedCategory { get; set; }
+
+    }
+
     public class DeleteUserViewModel
     {
         [Required]

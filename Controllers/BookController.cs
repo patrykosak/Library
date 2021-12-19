@@ -38,22 +38,36 @@ namespace Library.Controllers
             }
             return View();
         }
-
-        public ActionResult SearchBookByCategory(String searchString)
+        
+        public ActionResult SearchBookByCategory()
         {
-
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var category in db.Categories)
+            {
+                list.Add(new SelectListItem() { Value = category.Name, Text = category.Name });
+            }
+            foreach (var subcategory in db.Subcategories)
+            {
+                list.Add(new SelectListItem() { Value = subcategory.Name, Text = subcategory.Name });
+            }
+            ViewBag.categories = list;
             ViewBag.bookList = db.Books.ToList();
+          
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SearchBookByCategory(SearchBookByCategoryViewModel model)
+        { 
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(model.selectedCategory))
             {
                 var books = db.Books.ToList();
-                books = books.Where(b => b.Title.Contains(searchString) || b.Author.Name.Contains(searchString)
-                     || b.Author.Surname.Contains(searchString)
-                     || b.PublishingHouse.Name.Contains(searchString)).ToList();
+                books = books.Where(b => b.Subcategory.Name == model.selectedCategory || b.Subcategory.Category.Name == model.selectedCategory).ToList();
 
                 ViewBag.bookList = books;
             }
-            return View();
+            return View(model);
         }
 
         // GET: Book/Details/5
