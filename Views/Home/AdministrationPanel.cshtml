@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Administration Panel";
+}
+<h2>@ViewBag.Title</h2>
+
+
+@Html.ActionLink(Library.Resources.SharedResource.Books, "Index", "Book")<br />
+@Html.ActionLink(Library.Resources.SharedResource.Authors, "Index", "Author")<br />
+@Html.ActionLink(Library.Resources.SharedResource.PublishingHouses, "Index", "PublishingHouse")

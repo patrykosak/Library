@@ -36,6 +36,11 @@ namespace Library.Controllers
 
             return View();
         }
+        public ActionResult AdministrationPanel()
+        {
+
+            return View();
+        }
         public ActionResult Change(String LanguageAbbrevation)
         {
             if (LanguageAbbrevation != null)

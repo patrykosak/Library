@@ -59,7 +59,12 @@ namespace Library.Controllers
         public ActionResult Create()
         {
             ViewBag.AuthorID = new SelectList(db.Authors, "AuthorID", "Name");
-            ViewBag.publishingHouseID = new SelectList(db.PublishingHouses, "publishingHouseID", "Name");
+            List<SelectListItem> list = new List<SelectListItem>();
+            foreach (var publishingHouse in db.PublishingHouses)
+            {
+                    list.Add(new SelectListItem() { Value = publishingHouse.publishingHouseID.ToString(), Text = publishingHouse.Name });
+            }
+            ViewBag.publishingHouseID = list;
             return View();
         }
 
