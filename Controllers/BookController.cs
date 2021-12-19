@@ -39,6 +39,23 @@ namespace Library.Controllers
             return View();
         }
 
+        public ActionResult SearchBookByCategory(String searchString)
+        {
+
+            ViewBag.bookList = db.Books.ToList();
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                var books = db.Books.ToList();
+                books = books.Where(b => b.Category.Contains(searchString) || b.Author.Name.Contains(searchString)
+                     || b.Author.Surname.Contains(searchString)
+                     || b.PublishingHouse.Name.Contains(searchString)).ToList();
+
+                ViewBag.bookList = books;
+            }
+            return View();
+        }
+
         // GET: Book/Details/5
         public ActionResult Details(int? id)
         {

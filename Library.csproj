@@ -462,6 +462,7 @@
     <Content Include="Views\Manage\ConfirmUser.cshtml" />
     <Content Include="Views\Manage\DeleteUser.cshtml" />
     <Content Include="Views\Home\AdministrationPanel.cshtml" />
+    <Content Include="Views\Book\SearchBookByCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

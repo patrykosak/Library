@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "SearchBook";
+}
+
+@using Library.Models;
+<div class="jumbotron">
+    <h1>@Library.Resources.SharedResource.Library</h1>
+</div>
+
+<div class="row">
+
+    <div class="input-group input-group-sm">
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                Find: @Html.TextBox("SearchString")
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <h2>@ViewBag.Title</h2>
+    <table cellpadding="8" cellspacing="10" class="table">
+
+        <tr>
+
+            <th>ISBN</th>
+            <th>Title </th>
+            <th>Author</th>
+            <th>Publishing House</th>
+            <th></th>
+
+        </tr>
+        @foreach (Book book in ViewBag.bookList)
+        {
+            <tr>
+                <th> @book.ISBN </th>
+                <th> @book.Title </th>
+                <th>
+
+                    @book.Author.Name<a> </a>@book.Author.Surname
+                </th>
+                <th> @book.PublishingHouse.Name </th>
+
+            </tr>
+       }
+
+    </table>
+
+    <div class="col-md-4">
+
+    </div>
+</div>
