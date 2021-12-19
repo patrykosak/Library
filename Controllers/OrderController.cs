@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Library.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace Library.Controllers
 {
@@ -18,6 +20,13 @@ namespace Library.Controllers
         public ActionResult Index()
         {
             var orders = db.Orders.Include(o => o.Cart).Include(o => o.User);
+            return View(orders.ToList());
+        }
+
+        public ActionResult UserOrders()
+        {
+            var user = User.Identity.GetUserId();
+            var orders = db.Orders.Include(o => o.Cart).Include(o => o.User).Where(o => o.userId == user);
             return View(orders.ToList());
         }
 
