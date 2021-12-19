@@ -301,6 +301,10 @@
     <Compile Include="Migrations\202112152156263_addEnumStatus.Designer.cs">
       <DependentUpon>202112152156263_addEnumStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112192110251_addSubcategoryToBook.cs" />
+    <Compile Include="Migrations\202112192110251_addSubcategoryToBook.Designer.cs">
+      <DependentUpon>202112192110251_addSubcategoryToBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -518,6 +522,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112152156263_addEnumStatus.resx">
       <DependentUpon>202112152156263_addEnumStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112192110251_addSubcategoryToBook.resx">
+      <DependentUpon>202112192110251_addSubcategoryToBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -47,7 +47,7 @@ namespace Library.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 var books = db.Books.ToList();
-                books = books.Where(b => b.Category.Contains(searchString) || b.Author.Name.Contains(searchString)
+                books = books.Where(b => b.Title.Contains(searchString) || b.Author.Name.Contains(searchString)
                      || b.Author.Surname.Contains(searchString)
                      || b.PublishingHouse.Name.Contains(searchString)).ToList();
 

@@ -19,8 +19,9 @@ namespace Library.Models
         public int PublicYear { get; set; }
         public int Amount { get; set; }
         public int AuthorID { get; set; }
-
         public virtual Author Author { get; set; }
+        public int SubcategoryID { get; set; }
+        public virtual Subcategory Subcategory { get; set; }
         public int publishingHouseID { get; set; }
         public virtual PublishingHouse PublishingHouse { get; set; }
         public virtual ICollection<File> Files { get; set; }
