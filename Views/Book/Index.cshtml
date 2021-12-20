@@ -54,7 +54,7 @@
         @Html.DisplayFor(modelItem => item.Amount)
     </td>
     <td>
-        @using (Html.BeginForm(Library.Resources.SharedResource.OrderNow, "ShoppingCart", FormMethod.Post))
+        @using (Html.BeginForm("OrderNow", "ShoppingCart", FormMethod.Post))
         {
                         @Html.Hidden("quantity", 1)
                         @Html.Hidden("id", item.ISBN)

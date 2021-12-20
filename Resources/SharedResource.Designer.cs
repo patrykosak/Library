@@ -151,6 +151,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cart.
+        /// </summary>
+        public static string Cart {
+            get {
+                return ResourceManager.GetString("Cart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Category.
         /// </summary>
         public static string Category {
@@ -174,6 +183,15 @@ namespace Library.Resources {
         public static string Contact {
             get {
                 return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string Create {
+            get {
+                return ResourceManager.GetString("Create", resourceCulture);
             }
         }
         
@@ -282,6 +300,15 @@ namespace Library.Resources {
         public static string Library {
             get {
                 return ResourceManager.GetString("Library", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Orders.
+        /// </summary>
+        public static string MyOrders {
+            get {
+                return ResourceManager.GetString("MyOrders", resourceCulture);
             }
         }
         

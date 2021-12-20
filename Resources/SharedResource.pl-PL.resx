@@ -147,6 +147,9 @@
   <data name="Books" xml:space="preserve">
     <value>Książki</value>
   </data>
+  <data name="Cart" xml:space="preserve">
+    <value>Koszyk</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Kategoria</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Kontakt</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Stwórz</value>
   </data>
   <data name="CreateNew" xml:space="preserve">
     <value>Dodaj nową</value>
@@ -191,6 +197,9 @@
   </data>
   <data name="Library" xml:space="preserve">
     <value>Biblioteka</value>
+  </data>
+  <data name="MyOrders" xml:space="preserve">
+    <value>Moje zamówienia</value>
   </data>
   <data name="NewBooks" xml:space="preserve">
     <value>Nowe książki</value>
