@@ -120,6 +120,12 @@
   <data name="About" xml:space="preserve">
     <value>O nas</value>
   </data>
+  <data name="Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Ilość</value>
+  </data>
   <data name="Announcements" xml:space="preserve">
     <value>Ogłoszenia</value>
   </data>
@@ -129,11 +135,17 @@
   <data name="Authors" xml:space="preserve">
     <value>Autorzy</value>
   </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Wróć do listy</value>
+  </data>
   <data name="Basic" xml:space="preserve">
     <value>Zwykły</value>
   </data>
   <data name="Books" xml:space="preserve">
     <value>Książki</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategoria</value>
   </data>
   <data name="Color" xml:space="preserve">
     <value>Kolorowy</value>
@@ -144,8 +156,20 @@
   <data name="Dark" xml:space="preserve">
     <value>Ciemny</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
   <data name="English" xml:space="preserve">
     <value>Angielski</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Pliki</value>
   </data>
   <data name="German" xml:space="preserve">
     <value>Niemiecki</value>
@@ -170,6 +194,12 @@
   </data>
   <data name="PublishingHouses" xml:space="preserve">
     <value>Wydawnictwa</value>
+  </data>
+  <data name="Subcategory" xml:space="preserve">
+    <value>Podkategoria</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>Tagi</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Motyw</value>

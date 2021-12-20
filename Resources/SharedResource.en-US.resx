@@ -120,6 +120,12 @@
   <data name="About" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="Announcements" xml:space="preserve">
     <value>Announcements</value>
   </data>
@@ -129,11 +135,17 @@
   <data name="Authors" xml:space="preserve">
     <value>Authors</value>
   </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Back to list</value>
+  </data>
   <data name="Basic" xml:space="preserve">
     <value>Basic</value>
   </data>
   <data name="Books" xml:space="preserve">
     <value>Books</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
   </data>
   <data name="Color" xml:space="preserve">
     <value>Color</value>
@@ -144,8 +156,20 @@
   <data name="Dark" xml:space="preserve">
     <value>Dark</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
+  </data>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
   </data>
   <data name="German" xml:space="preserve">
     <value>German</value>
@@ -159,6 +183,9 @@
   <data name="Library" xml:space="preserve">
     <value>Library</value>
   </data>
+  <data name="NewBooks" xml:space="preserve">
+    <value>New books</value>
+  </data>
   <data name="Polish" xml:space="preserve">
     <value>Polish</value>
   </data>
@@ -168,8 +195,11 @@
   <data name="PublishingHouses" xml:space="preserve">
     <value>PublishingHouses</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>New books</value>
+  <data name="Subcategory" xml:space="preserve">
+    <value>Subcategory</value>
+  </data>
+  <data name="Tags" xml:space="preserve">
+    <value>Tags</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Theme</value>
