@@ -141,6 +141,9 @@
   <data name="Basic" xml:space="preserve">
     <value>Basic</value>
   </data>
+  <data name="Book" xml:space="preserve">
+    <value>Book</value>
+  </data>
   <data name="Books" xml:space="preserve">
     <value>Books</value>
   </data>
@@ -152,6 +155,9 @@
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>Create New</value>
   </data>
   <data name="Dark" xml:space="preserve">
     <value>Dark</value>
@@ -177,6 +183,9 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
@@ -185,6 +194,9 @@
   </data>
   <data name="NewBooks" xml:space="preserve">
     <value>New books</value>
+  </data>
+  <data name="OrderNow" xml:space="preserve">
+    <value>Order Now</value>
   </data>
   <data name="Polish" xml:space="preserve">
     <value>Polish</value>

@@ -1,13 +1,13 @@
 ﻿@model Library.Models.Book
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Library.Resources.SharedResource.Details";
 }
 
-<h2>Details</h2>
+<h2>@Library.Resources.SharedResource.Details</h2>
 
 <div>
-    <h4>Book</h4>
+    <h4>@Library.Resources.SharedResource.Book</h4>
     <hr />
     @foreach (var item in Model.Pictures)
     {
