@@ -26,6 +26,6 @@ namespace Library.Models
         public virtual PublishingHouse PublishingHouse { get; set; }
         public virtual ICollection<File> Files { get; set; }
         public virtual ICollection<Picture> Pictures { get; set; }
-
+        public virtual ICollection<Tag> Tags { get; set; }
     }
 }

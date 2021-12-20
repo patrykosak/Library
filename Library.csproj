@@ -305,6 +305,10 @@
     <Compile Include="Migrations\202112192110251_addSubcategoryToBook.Designer.cs">
       <DependentUpon>202112192110251_addSubcategoryToBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112200053408_addTagsToBook.cs" />
+    <Compile Include="Migrations\202112200053408_addTagsToBook.Designer.cs">
+      <DependentUpon>202112200053408_addTagsToBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -321,6 +325,7 @@
     <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="Models\RoleViewModel.cs" />
     <Compile Include="Models\Subcategory.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -526,6 +531,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112192110251_addSubcategoryToBook.resx">
       <DependentUpon>202112192110251_addSubcategoryToBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112200053408_addTagsToBook.resx">
+      <DependentUpon>202112200053408_addTagsToBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
