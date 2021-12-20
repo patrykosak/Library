@@ -311,6 +311,10 @@
     <Compile Include="Migrations\202112200053408_addTagsToBook.Designer.cs">
       <DependentUpon>202112200053408_addTagsToBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112201400132_AddMessages.cs" />
+    <Compile Include="Migrations\202112201400132_AddMessages.Designer.cs">
+      <DependentUpon>202112201400132_AddMessages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Author.cs" />
@@ -548,6 +552,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112200053408_addTagsToBook.resx">
       <DependentUpon>202112200053408_addTagsToBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112201400132_AddMessages.resx">
+      <DependentUpon>202112201400132_AddMessages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

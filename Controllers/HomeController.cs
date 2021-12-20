@@ -19,7 +19,11 @@ namespace Library.Controllers
                 books = books.OrderByDescending(b => b.ISBN).Take(3).ToList();
 
                 ViewBag.bookList = books;
-            
+
+                var messages = db.Messages.ToList();
+
+                ViewBag.messages = messages;
+
             return View();
         }
         [Authorize]
