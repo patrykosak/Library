@@ -9,6 +9,14 @@
 <div>
     <h4>Book</h4>
     <hr />
+    @foreach (var item in Model.Pictures)
+    {
+<div>
+    <img src="@item.Link" height="450px" width="450px"/>
+    <br />
+</div>
+            }
+
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Author.Name)
@@ -33,7 +41,20 @@
         <dd>
             @Html.DisplayFor(model => model.Title)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Subcategory.Category.Name)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.Subcategory.Category.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Subcategory.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subcategory.Name)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.PublicYear)
         </dt>
@@ -50,6 +71,15 @@
             @Html.DisplayFor(model => model.Amount)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Files)
+        </dt>
+        <dd>
+            @foreach (var link in Model.Files)
+            {
+                <a href="@link.Address">@link.Name</a>
+            }
+        </dd>
     </dl>
 </div>
 <p>
