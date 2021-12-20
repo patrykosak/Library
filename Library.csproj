@@ -242,6 +242,7 @@
     <Compile Include="Controllers\FileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PictureController.cs" />
     <Compile Include="Controllers\PublishingHouseController.cs" />
@@ -321,6 +322,7 @@
     <Compile Include="Models\File.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Picture.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
@@ -480,6 +482,11 @@
     <Content Include="Views\Tag\Edit.cshtml" />
     <Content Include="Views\Tag\Index.cshtml" />
     <Content Include="Views\Book\SearchBookByTag.cshtml" />
+    <Content Include="Views\Message\Create.cshtml" />
+    <Content Include="Views\Message\Delete.cshtml" />
+    <Content Include="Views\Message\Details.cshtml" />
+    <Content Include="Views\Message\Edit.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

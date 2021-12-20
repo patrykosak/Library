@@ -51,6 +51,7 @@ namespace Library.Models
         public DbSet<Subcategory> Subcategories { get; set; }
         public DbSet<Cart> Cart { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Message> Messages { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public IEnumerable ApplicationUsers { get; internal set; }
         public static ApplicationDbContext Create()
