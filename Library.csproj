@@ -248,6 +248,7 @@
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Controllers\SubcategoryController.cs" />
+    <Compile Include="Controllers\TagController.cs" />
     <Compile Include="DAL\LibraryContext.cs" />
     <Compile Include="DAL\LibraryInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -473,6 +474,12 @@
     <Content Include="Views\Home\AdministrationPanel.cshtml" />
     <Content Include="Views\Book\SearchBookByCategory.cshtml" />
     <Content Include="Views\Order\UserOrders.cshtml" />
+    <Content Include="Views\Tag\Create.cshtml" />
+    <Content Include="Views\Tag\Delete.cshtml" />
+    <Content Include="Views\Tag\Details.cshtml" />
+    <Content Include="Views\Tag\Edit.cshtml" />
+    <Content Include="Views\Tag\Index.cshtml" />
+    <Content Include="Views\Book\SearchBookByTag.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -38,7 +38,33 @@ namespace Library.Controllers
             }
             return View();
         }
-        
+
+        public ActionResult SearchBookByTag(String searchString)
+        {
+
+            ViewBag.bookList = db.Books.ToList();
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                var books = db.Books.ToList();
+                List<Book> selectedBooks = new List<Book>();
+                foreach (var book in books)
+                {
+                    foreach(var tag in book.Tags)
+                    {
+                        if (tag.Name.ToUpper().Contains(searchString.ToUpper()))
+                        {
+                            selectedBooks.Add(book);
+                            break;
+                        }
+                    }
+                }
+
+                ViewBag.bookList = selectedBooks;
+            }
+            return View();
+        }
+
         public ActionResult SearchBookByCategory()
         {
             List<SelectListItem> list = new List<SelectListItem>();
