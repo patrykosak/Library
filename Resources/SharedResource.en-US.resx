@@ -120,6 +120,12 @@
   <data name="About" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="Announcements" xml:space="preserve">
+    <value>Announcements</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
   <data name="Authors" xml:space="preserve">
     <value>Authors</value>
   </data>
@@ -156,10 +162,22 @@
   <data name="Polish" xml:space="preserve">
     <value>Polish</value>
   </data>
+  <data name="PublishingHouse" xml:space="preserve">
+    <value>Publishing house</value>
+  </data>
   <data name="PublishingHouses" xml:space="preserve">
     <value>PublishingHouses</value>
   </data>
+  <data name="String1" xml:space="preserve">
+    <value>New books</value>
+  </data>
   <data name="Theme" xml:space="preserve">
     <value>Theme</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="YearOfPublication" xml:space="preserve">
+    <value>Year of publication</value>
   </data>
 </root>

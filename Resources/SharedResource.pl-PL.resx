@@ -120,6 +120,12 @@
   <data name="About" xml:space="preserve">
     <value>O nas</value>
   </data>
+  <data name="Announcements" xml:space="preserve">
+    <value>Ogłoszenia</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
   <data name="Authors" xml:space="preserve">
     <value>Autorzy</value>
   </data>
@@ -153,13 +159,25 @@
   <data name="Library" xml:space="preserve">
     <value>Biblioteka</value>
   </data>
+  <data name="NewBooks" xml:space="preserve">
+    <value>Nowe książki</value>
+  </data>
   <data name="Polish" xml:space="preserve">
     <value>Polski</value>
+  </data>
+  <data name="PublishingHouse" xml:space="preserve">
+    <value>Wydawnictwo</value>
   </data>
   <data name="PublishingHouses" xml:space="preserve">
     <value>Wydawnictwa</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Motyw</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="YearOfPublication" xml:space="preserve">
+    <value>Rok publikacji</value>
   </data>
 </root>

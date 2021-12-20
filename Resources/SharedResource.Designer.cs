@@ -70,6 +70,24 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Announcements.
+        /// </summary>
+        public static string Announcements {
+            get {
+                return ResourceManager.GetString("Announcements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        public static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Authors.
         /// </summary>
         public static string Authors {
@@ -169,6 +187,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New books.
+        /// </summary>
+        public static string NewBooks {
+            get {
+                return ResourceManager.GetString("NewBooks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Polish.
         /// </summary>
         public static string Polish {
@@ -178,7 +205,16 @@ namespace Library.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PublishingHouses.
+        ///   Looks up a localized string similar to Publishing house.
+        /// </summary>
+        public static string PublishingHouse {
+            get {
+                return ResourceManager.GetString("PublishingHouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publishing houses.
         /// </summary>
         public static string PublishingHouses {
             get {
@@ -192,6 +228,24 @@ namespace Library.Resources {
         public static string Theme {
             get {
                 return ResourceManager.GetString("Theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year of publication.
+        /// </summary>
+        public static string YearOfPublication {
+            get {
+                return ResourceManager.GetString("YearOfPublication", resourceCulture);
             }
         }
     }

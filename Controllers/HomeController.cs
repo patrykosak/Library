@@ -55,7 +55,11 @@ namespace Library.Controllers
             HttpCookie cookie = new HttpCookie("Language");
             cookie.Value = LanguageAbbrevation;
             Response.Cookies.Add(cookie);
-            ViewBag.bookList = db.Books.ToList();
+            var books = db.Books.ToList();
+            books = books.OrderByDescending(b => b.ISBN).Take(3).ToList();
+            ViewBag.bookList = books;
+            var messages = db.Messages.ToList();
+            ViewBag.messages = messages;
             return View("Index");
 
         }

@@ -48,10 +48,6 @@
         </a>
     </div>
 </div>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
     .carousel-inner {
         width: auto;
@@ -73,22 +69,22 @@
 
 <div class="row">
 
-    <h2>New Books</h2>
+    <h2>@Library.Resources.SharedResource.NewBooks</h2>
     <table cellpadding="8" cellspacing="10" class="table">
 
         <tr>
 
-            <th>ISBN</th>
-            <th>Title </th>
-            <th>Author</th>
-            <th>Publishing House</th>
+            <th>@Library.Resources.SharedResource.YearOfPublication</th>
+            <th>@Library.Resources.SharedResource.Title </th>
+            <th>@Library.Resources.SharedResource.Author</th>
+            <th>@Library.Resources.SharedResource.PublishingHouse</th>
             <th></th>
 
         </tr>
         @foreach (Book book in ViewBag.bookList)
         {
             <tr>
-                <th> @book.ISBN </th>
+                <th> @book.PublicYear </th>
                 <th> @book.Title </th>
                 <th>
 
@@ -101,9 +97,10 @@
 
     </table>
 
+    <h1>@Library.Resources.SharedResource.Announcements</h1>
     @foreach (Message message in ViewBag.messages)
     {
-        <h1>@message.Title</h1>
+        <h2>@message.Title</h2>
         <div>@message.Text</div>
     }
 
