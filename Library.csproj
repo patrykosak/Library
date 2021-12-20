@@ -322,6 +322,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CustomAuthorize.cs" />
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\File.cs" />
     <Compile Include="Models\IdentityModels.cs" />
