@@ -24,11 +24,17 @@
             <ul class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink(Library.Resources.SharedResource.Home, "Index", "Home")</li>
-                    <li>@Html.ActionLink(Library.Resources.SharedResource.MyOrders, "UserOrders", "Order")</li>
-                    <li>@Html.ActionLink(Library.Resources.SharedResource.Cart, "Index", "ShoppingCart")</li>
                     <li>@Html.ActionLink(Library.Resources.SharedResource.Books, "Index", "Book")</li>
-                    <li>@Html.ActionLink(Library.Resources.SharedResource.Authors, "Index", "Author")</li>
-                    <li>@Html.ActionLink(Library.Resources.SharedResource.PublishingHouses, "Index", "PublishingHouse")</li>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
+                    {
+                        <li>@Html.ActionLink(Library.Resources.SharedResource.MyOrders, "UserOrders", "Order")</li>
+                        <li>@Html.ActionLink(Library.Resources.SharedResource.Cart, "Index", "ShoppingCart")</li>
+                    }
+
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin") || User.Identity.IsAuthenticated && User.IsInRole("Worker"))
+                    {
+                        <li>@Html.ActionLink(Library.Resources.SharedResource.MyOrders, "Index", "Order")</li>
+                    }
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             @Library.Resources.SharedResource.Language
@@ -40,7 +46,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                             @Library.Resources.SharedResource.Theme
                             <span class="caret"></span>
                         </a>

@@ -142,6 +142,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://i.ibb.co/m48NyXc/imageonline-co-add-text-1.png.
+        /// </summary>
+        public static string BookJpg {
+            get {
+                return ResourceManager.GetString("BookJpg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Books.
         /// </summary>
         public static string Books {

@@ -144,6 +144,9 @@
   <data name="Book" xml:space="preserve">
     <value>Book</value>
   </data>
+  <data name="BookJpg" xml:space="preserve">
+    <value>https://i.ibb.co/m48NyXc/imageonline-co-add-text-1.png</value>
+  </data>
   <data name="Books" xml:space="preserve">
     <value>Books</value>
   </data>
