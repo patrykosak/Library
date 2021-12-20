@@ -223,6 +223,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this?.
+        /// </summary>
+        public static string DeleteConfirm {
+            get {
+                return ResourceManager.GetString("DeleteConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
         public static string Details {
@@ -354,6 +363,15 @@ namespace Library.Resources {
         public static string PublishingHouses {
             get {
                 return ResourceManager.GetString("PublishingHouses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         

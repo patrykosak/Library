@@ -62,6 +62,7 @@ namespace Library.Models
         public System.Data.Entity.DbSet<Library.Models.File> Files { get; set; }
 
         public System.Data.Entity.DbSet<Library.Models.Picture> Pictures { get; set; }
+
     }
 
 

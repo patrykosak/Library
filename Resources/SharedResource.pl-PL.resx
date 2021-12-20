@@ -171,6 +171,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Usuń</value>
   </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Czy jesteś pewny że chcesz to usunąć?</value>
+  </data>
   <data name="Details" xml:space="preserve">
     <value>Szczegóły</value>
   </data>
@@ -215,6 +218,9 @@
   </data>
   <data name="PublishingHouses" xml:space="preserve">
     <value>Wydawnictwa</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapisz</value>
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Podkategoria</value>
