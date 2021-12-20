@@ -156,6 +156,9 @@
   <data name="Cart" xml:space="preserve">
     <value>Wagen</value>
   </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategorien</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Kategorie</value>
   </data>
@@ -257,6 +260,9 @@
   </data>
   <data name="SearchTag" xml:space="preserve">
     <value>Suche nach einem Buch nach Tags</value>
+  </data>
+  <data name="Subcategories" xml:space="preserve">
+    <value>Unterkategorien</value>
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Unterkategorie</value>

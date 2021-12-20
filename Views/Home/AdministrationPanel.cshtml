@@ -20,7 +20,11 @@
 <br />
 @Html.ActionLink("Add announcement", "Create", "Message")
 <br />
-@Html.ActionLink("Check announcement", "Index", "Message")
+@Html.ActionLink(Library.Resources.SharedResource.Categories, "Index", "Category")
+<br />
+@Html.ActionLink(Library.Resources.SharedResource.Subcategories, "Index", "Subcategory")
+<br />
+@Html.ActionLink("Check announcements", "Index", "Message")
 @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
 {
     <br />
@@ -28,5 +32,7 @@
     <br />
     @Html.ActionLink("Confirm User", "ConfirmUser", "Manage")
     <br />
-    @Html.ActionLink("Delete User", "DeleteUser", "Manage")<br />  
+    @Html.ActionLink("Delete User", "DeleteUser", "Manage")
+    <br />
+
 }

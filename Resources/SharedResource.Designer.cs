@@ -178,6 +178,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Categories.
+        /// </summary>
+        public static string Categories {
+            get {
+                return ResourceManager.GetString("Categories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Category.
         /// </summary>
         public static string Category {
@@ -480,6 +489,15 @@ namespace Library.Resources {
         public static string SearchTag {
             get {
                 return ResourceManager.GetString("SearchTag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subcategories.
+        /// </summary>
+        public static string Subcategories {
+            get {
+                return ResourceManager.GetString("Subcategories", resourceCulture);
             }
         }
         

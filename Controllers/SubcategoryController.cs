@@ -10,6 +10,7 @@ using Library.Models;
 
 namespace Library.Controllers
 {
+    [CustomAuthorize(Roles = "Admin,Worker")]
     public class SubcategoryController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

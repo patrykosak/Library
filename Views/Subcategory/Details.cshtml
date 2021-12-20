@@ -1,17 +1,17 @@
 ﻿@model Library.Models.Subcategory
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Library.Resources.SharedResource.Details;
 }
 
-<h2>Details</h2>
+<h2>@Library.Resources.SharedResource.Details</h2>
 
 <div>
-    <h4>Subcategory</h4>
+    <h4>@Library.Resources.SharedResource.Subcategory</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Category.Name)
+            @Library.Resources.SharedResource.Category &nbsp; @Library.Resources.SharedResource.Name
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Library.Resources.SharedResource.Name
         </dt>
 
         <dd>
@@ -29,6 +29,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.SubcategoryID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id = Model.SubcategoryID }) |
+    @Html.ActionLink(Library.Resources.SharedResource.BackToList, "Index")
 </p>
