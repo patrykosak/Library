@@ -1,4 +1,4 @@
-﻿@{ ViewBag.Title = "Cart"; }
+﻿@{ ViewBag.Title = Library.Resources.SharedResource.Cart; }
 @using Library.Models;
 <!DOCTYPE html>
 <html>
@@ -7,15 +7,12 @@
 
 </head>
 <body>
-    <h2>Cart</h2>
-    <h3>Total amount: @Session["licz"]</h3>
+    <h2>@Library.Resources.SharedResource.Cart</h2>
+    <h3>@Library.Resources.SharedResource.TotalAmount: @Session["licz"]</h3>
     <table class="table-condensed">
         <tr>
-            <th>ISBN</th>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Sub Total</th>
+            <th>@Library.Resources.SharedResource.Title</th>
+            <th>@Library.Resources.SharedResource.Quantity</th>
         </tr>
 
         @if ((List<CartItem>)Session["cart"] != null)
@@ -26,8 +23,7 @@
             {
 
 <tr>
-    <th>@item.ISBN</th>
-
+    
     
     <th>
         @titles[i]
@@ -36,23 +32,22 @@
     </th>
 
         
-    <th></th>
     <th>@item.Quantity</th>
     <th style="border:none">
         @using (Html.BeginForm("Remove", "ShoppingCart", FormMethod.Post))
         {
 @Html.Hidden("id", item.ISBN)
                         @Html.Hidden("quantity", item.Quantity)
-                                                <button type="submit" class="btn btn-danger">Remove</button>}
+                                                <button type="submit" class="btn btn-danger">@Library.Resources.SharedResource.Remove</button>}
         
     </th>
 </tr>}
             }
     </table>
     <br /><br />
-    @Html.ActionLink("Continue Shopping", "Index", "Book")
+    @Html.ActionLink(Library.Resources.SharedResource.ContinueBorrowing, "Index", "Book")
     <br /><br />
-    @Html.ActionLink("MakeAnOrder", "MakeAnOrder", "ShoppingCart")
+    @Html.ActionLink(Library.Resources.SharedResource.MakeOrder, "MakeAnOrder", "ShoppingCart")
 </body>
 
 </html>

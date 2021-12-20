@@ -168,6 +168,9 @@
   <data name="Contact" xml:space="preserve">
     <value>Kontakt</value>
   </data>
+  <data name="ContinueBorrowing" xml:space="preserve">
+    <value>Weiter ausleihen</value>
+  </data>
   <data name="Create" xml:space="preserve">
     <value>Erstellen</value>
   </data>
@@ -219,6 +222,9 @@
   <data name="LogOff" xml:space="preserve">
     <value>Abmelden</value>
   </data>
+  <data name="MakeOrder" xml:space="preserve">
+    <value>Eine Bestellung aufgeben</value>
+  </data>
   <data name="MyOrders" xml:space="preserve">
     <value>Meine Bestellungen</value>
   </data>
@@ -230,6 +236,9 @@
   </data>
   <data name="NewBooks" xml:space="preserve">
     <value>Neue bücher</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Befehl</value>
   </data>
   <data name="OrderJpg" xml:space="preserve">
     <value>https://i.ibb.co/Kww1Tx9/imageonline-co-add-text-5.png</value>
@@ -246,8 +255,14 @@
   <data name="PublishingHouses" xml:space="preserve">
     <value>Verlage</value>
   </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Menge</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Registrieren</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Entfernen</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Speichern</value>
@@ -275,6 +290,9 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>Titel</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Gesamtsumme</value>
   </data>
   <data name="YearOfPublication" xml:space="preserve">
     <value>Veröffentlichungsjahr</value>

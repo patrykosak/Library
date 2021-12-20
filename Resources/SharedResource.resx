@@ -168,6 +168,9 @@
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
+  <data name="ContinueBorrowing" xml:space="preserve">
+    <value>Continue borrowing</value>
+  </data>
   <data name="Create" xml:space="preserve">
     <value>Create</value>
   </data>
@@ -219,6 +222,9 @@
   <data name="LogOff" xml:space="preserve">
     <value>LogOff</value>
   </data>
+  <data name="MakeOrder" xml:space="preserve">
+    <value>Make an order</value>
+  </data>
   <data name="MyOrders" xml:space="preserve">
     <value>My Orders</value>
   </data>
@@ -230,6 +236,9 @@
   </data>
   <data name="NewBooks" xml:space="preserve">
     <value>New books</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Order</value>
   </data>
   <data name="OrderJpg" xml:space="preserve">
     <value>https://i.ibb.co/KbGF6Qy/imageonline-co-add-text-3.png</value>
@@ -246,8 +255,14 @@
   <data name="PublishingHouses" xml:space="preserve">
     <value>Publishing houses</value>
   </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
@@ -275,6 +290,9 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>Title</value>
+  </data>
+  <data name="TotalAmount" xml:space="preserve">
+    <value>Total amount</value>
   </data>
   <data name="YearOfPublication" xml:space="preserve">
     <value>Year of publication</value>
