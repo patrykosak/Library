@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace Library.Controllers
 {
+    [Authorize]
     public class ShoppingCartController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

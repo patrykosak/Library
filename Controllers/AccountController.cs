@@ -93,6 +93,11 @@ namespace Library.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    var user = await UserManager.FindByNameAsync(model.Email);
+                    if (!await UserManager.IsEmailConfirmedAsync(user.Id))
+                    {
+                        return View("EmailNotConfirmed");
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");

@@ -70,11 +70,56 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Access denied.
+        /// </summary>
+        public static string AccessDenied {
+            get {
+                return ResourceManager.GetString("AccessDenied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
         public static string Add {
             get {
                 return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add announcements.
+        /// </summary>
+        public static string AddAnnouncement {
+            get {
+                return ResourceManager.GetString("AddAnnouncement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add files to book.
+        /// </summary>
+        public static string AddFiles {
+            get {
+                return ResourceManager.GetString("AddFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add pictures to book.
+        /// </summary>
+        public static string AddPictures {
+            get {
+                return ResourceManager.GetString("AddPictures", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add tags to book.
+        /// </summary>
+        public static string AddTags {
+            get {
+                return ResourceManager.GetString("AddTags", resourceCulture);
             }
         }
         
@@ -196,11 +241,47 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Role.
+        /// </summary>
+        public static string ChangeRole {
+            get {
+                return ResourceManager.GetString("ChangeRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check announcements.
+        /// </summary>
+        public static string CheckAnnouncements {
+            get {
+                return ResourceManager.GetString("CheckAnnouncements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Color.
         /// </summary>
         public static string Color {
             get {
                 return ResourceManager.GetString("Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm email to login.
+        /// </summary>
+        public static string ConfirmEmailToLogin {
+            get {
+                return ResourceManager.GetString("ConfirmEmailToLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm User.
+        /// </summary>
+        public static string ConfirmUser {
+            get {
+                return ResourceManager.GetString("ConfirmUser", resourceCulture);
             }
         }
         
@@ -268,6 +349,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete User.
+        /// </summary>
+        public static string DeleteUser {
+            get {
+                return ResourceManager.GetString("DeleteUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
         public static string Details {
@@ -277,11 +367,29 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You do not have permission to view this page.
+        /// </summary>
+        public static string DontPermission {
+            get {
+                return ResourceManager.GetString("DontPermission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
         public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email not confirmed.
+        /// </summary>
+        public static string EmailNotConfirmed {
+            get {
+                return ResourceManager.GetString("EmailNotConfirmed", resourceCulture);
             }
         }
         

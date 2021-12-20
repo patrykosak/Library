@@ -120,8 +120,23 @@
   <data name="About" xml:space="preserve">
     <value>Über</value>
   </data>
+  <data name="AccessDenied" xml:space="preserve">
+    <value>Zugriff abgelehnt</value>
+  </data>
   <data name="Add" xml:space="preserve">
     <value>Hinzufügen</value>
+  </data>
+  <data name="AddAnnouncement" xml:space="preserve">
+    <value>Ankündigungen hinzufügen</value>
+  </data>
+  <data name="AddFiles" xml:space="preserve">
+    <value>Dateien zum Buch hinzufügen</value>
+  </data>
+  <data name="AddPictures" xml:space="preserve">
+    <value>Bilder zum Buch hinzufügen</value>
+  </data>
+  <data name="AddTags" xml:space="preserve">
+    <value>Tags zum Buch hinzufügen</value>
   </data>
   <data name="AdministrationPanel" xml:space="preserve">
     <value>Administrationsbereich</value>
@@ -162,8 +177,20 @@
   <data name="Category" xml:space="preserve">
     <value>Kategorie</value>
   </data>
+  <data name="ChangeRole" xml:space="preserve">
+    <value>Rolle ändern</value>
+  </data>
+  <data name="CheckAnnouncements" xml:space="preserve">
+    <value>Ankündigungen prüfen</value>
+  </data>
   <data name="Color" xml:space="preserve">
     <value>Farbe</value>
+  </data>
+  <data name="ConfirmEmailToLogin" xml:space="preserve">
+    <value>E-Mail zum Anmelden bestätigen</value>
+  </data>
+  <data name="ConfirmUser" xml:space="preserve">
+    <value>Benutzer bestätigen</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Kontakt</value>
@@ -186,11 +213,20 @@
   <data name="DeleteConfirm" xml:space="preserve">
     <value>Möchten Sie dies wirklich löschen?</value>
   </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Benutzer löschen</value>
+  </data>
   <data name="Details" xml:space="preserve">
     <value>Einzelheiten</value>
   </data>
+  <data name="DontPermission" xml:space="preserve">
+    <value>Sie haben keine Berechtigung, diese Seite anzuzeigen</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Bearbeiten</value>
+  </data>
+  <data name="EmailNotConfirmed" xml:space="preserve">
+    <value>E-Mail nicht bestätigt</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>Englisch</value>

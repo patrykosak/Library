@@ -10,29 +10,27 @@
 <br />
 @Html.ActionLink(Library.Resources.SharedResource.PublishingHouses, "Index", "PublishingHouse")
 <br />
-@Html.ActionLink("Confirm Users", "ConfirmUser", "Manage")
+@Html.ActionLink(Library.Resources.SharedResource.AddTags, "Create", "Tag")
 <br />
-@Html.ActionLink("Add tags to book", "Create", "Tag")
+@Html.ActionLink(Library.Resources.SharedResource.AddPictures, "Create", "Picture")
 <br />
-@Html.ActionLink("Add pictures to book", "Create", "Picture")
+@Html.ActionLink(Library.Resources.SharedResource.AddFiles, "Create", "File")
 <br />
-@Html.ActionLink("Add files to book", "Create", "File")
-<br />
-@Html.ActionLink("Add announcement", "Create", "Message")
+@Html.ActionLink(Library.Resources.SharedResource.AddAnnouncement, "Create", "Message")
 <br />
 @Html.ActionLink(Library.Resources.SharedResource.Categories, "Index", "Category")
 <br />
 @Html.ActionLink(Library.Resources.SharedResource.Subcategories, "Index", "Subcategory")
 <br />
-@Html.ActionLink("Check announcements", "Index", "Message")
+@Html.ActionLink(Library.Resources.SharedResource.CheckAnnouncements, "Index", "Message")
 @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
 {
     <br />
-    @Html.ActionLink("Change Role", "ChangeRole", "Manage")
+    @Html.ActionLink(Library.Resources.SharedResource.ChangeRole, "ChangeRole", "Manage")
     <br />
-    @Html.ActionLink("Confirm User", "ConfirmUser", "Manage")
+    @Html.ActionLink(Library.Resources.SharedResource.ConfirmUser, "ConfirmUser", "Manage")
     <br />
-    @Html.ActionLink("Delete User", "DeleteUser", "Manage")
+    @Html.ActionLink(Library.Resources.SharedResource.DeleteUser, "DeleteUser", "Manage")
     <br />
 
 }
