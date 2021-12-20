@@ -38,6 +38,13 @@ namespace Library.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Order order = db.Orders.Find(id);
+            var items = db.CartItems.Where(c => c.CartID == order.CartID).ToList();
+            List<string> list = new List<string>();
+            foreach (var item in items)
+            {
+                list.Add(item.Book.Title);
+            }
+            ViewBag.books = list;
             if (order == null)
             {
                 return HttpNotFound();

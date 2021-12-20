@@ -11,22 +11,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Cart.userId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cart.userId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.User.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.User.Name)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.status)
         </dt>
 
@@ -34,6 +18,16 @@
             @Html.DisplayFor(model => model.status)
         </dd>
 
+        <dt>
+            Books
+        </dt>
+
+        <dd>
+            @foreach (var item in ViewBag.books)
+            {
+                <div>@item</div>
+            }
+        </dd>
     </dl>
 </div>
 <p>
