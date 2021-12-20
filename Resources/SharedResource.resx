@@ -195,6 +195,9 @@
   <data name="German" xml:space="preserve">
     <value>German</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
@@ -207,8 +210,20 @@
   <data name="Library" xml:space="preserve">
     <value>Library</value>
   </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>LogOff</value>
+  </data>
   <data name="MyOrders" xml:space="preserve">
     <value>My Orders</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameSurname" xml:space="preserve">
+    <value>Name and Surname</value>
   </data>
   <data name="NewBooks" xml:space="preserve">
     <value>New books</value>
@@ -227,6 +242,9 @@
   </data>
   <data name="PublishingHouses" xml:space="preserve">
     <value>Publishing houses</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>

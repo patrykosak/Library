@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.Cart.userId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.User.Name)
+            @Library.Resources.SharedResource.NameSurname
         </th>
         <th>
             @Html.DisplayNameFor(model => model.status)
@@ -29,15 +29,15 @@
             @Html.DisplayFor(modelItem => item.Cart.userId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.User.Name)
+            @Html.DisplayFor(modelItem => item.User.Name) &nbsp; @Html.DisplayFor(modelItem => item.User.Surname)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OrderID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OrderID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OrderID })
+            @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id=item.OrderID }) |
+            @Html.ActionLink(Library.Resources.SharedResource.Details, "Details", new { id=item.OrderID }) |
+            @Html.ActionLink(Library.Resources.SharedResource.Delete, "Delete", new { id=item.OrderID })
         </td>
     </tr>
 }

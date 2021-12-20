@@ -195,6 +195,9 @@
   <data name="German" xml:space="preserve">
     <value>Niemiecki</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Witaj</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Dom</value>
   </data>
@@ -207,8 +210,20 @@
   <data name="Library" xml:space="preserve">
     <value>Biblioteka</value>
   </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Zaloguj się</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Wyloguj się</value>
+  </data>
   <data name="MyOrders" xml:space="preserve">
     <value>Moje zamówienia</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="NameSurname" xml:space="preserve">
+    <value>Imie i nazwisko</value>
   </data>
   <data name="NewBooks" xml:space="preserve">
     <value>Nowe książki</value>
@@ -227,6 +242,9 @@
   </data>
   <data name="PublishingHouses" xml:space="preserve">
     <value>Wydawnictwa</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Zarejestruj się</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Zapisz</value>

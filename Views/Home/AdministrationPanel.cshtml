@@ -21,9 +21,12 @@
 @Html.ActionLink("Add announcement", "Create", "Message")
 <br />
 @Html.ActionLink("Check announcement", "Index", "Message")
-<br />
-@Html.ActionLink("Change Role", "ChangeRole", "Manage")
-<br />
-@Html.ActionLink("Delete User", "DeleteUser", "Manage")
-<br />
-
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <br />
+    @Html.ActionLink("Change Role", "ChangeRole", "Manage")
+    <br />
+    @Html.ActionLink("Confirm User", "ConfirmUser", "Manage")
+    <br />
+    @Html.ActionLink("Delete User", "DeleteUser", "Manage")<br />  
+}
