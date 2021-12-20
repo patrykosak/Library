@@ -123,6 +123,9 @@
   <data name="Add" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="AdministrationPanel" xml:space="preserve">
+    <value>Administration Panel</value>
+  </data>
   <data name="Amount" xml:space="preserve">
     <value>Amount</value>
   </data>
@@ -227,6 +230,15 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
+  </data>
+  <data name="SearchCategory" xml:space="preserve">
+    <value>search for books by category</value>
+  </data>
+  <data name="SearchString" xml:space="preserve">
+    <value>search for a book by its title</value>
+  </data>
+  <data name="SearchTag" xml:space="preserve">
+    <value>search for a book by tags</value>
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Subcategory</value>

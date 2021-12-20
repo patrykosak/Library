@@ -79,6 +79,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Administration Panel.
+        /// </summary>
+        public static string AdministrationPanel {
+            get {
+                return ResourceManager.GetString("AdministrationPanel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amount.
         /// </summary>
         public static string Amount {
@@ -390,6 +399,33 @@ namespace Library.Resources {
         public static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to search for books by category.
+        /// </summary>
+        public static string SearchCategory {
+            get {
+                return ResourceManager.GetString("SearchCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to search for a book by its title.
+        /// </summary>
+        public static string SearchString {
+            get {
+                return ResourceManager.GetString("SearchString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to search for a book by tags.
+        /// </summary>
+        public static string SearchTag {
+            get {
+                return ResourceManager.GetString("SearchTag", resourceCulture);
             }
         }
         

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Administration Panel";
+    ViewBag.Title = Library.Resources.SharedResource.AdministrationPanel;
 }
 <h2>@ViewBag.Title</h2>
 
@@ -11,6 +11,16 @@
 @Html.ActionLink(Library.Resources.SharedResource.PublishingHouses, "Index", "PublishingHouse")
 <br />
 @Html.ActionLink("Confirm Users", "ConfirmUser", "Manage")
+<br />
+@Html.ActionLink("Add tags to book", "Create", "Tag")
+<br />
+@Html.ActionLink("Add pictures to book", "Create", "Picture")
+<br />
+@Html.ActionLink("Add files to book", "Create", "File")
+<br />
+@Html.ActionLink("Add announcement", "Create", "Message")
+<br />
+@Html.ActionLink("Check announcement", "Index", "Message")
 <br />
 @Html.ActionLink("Change Role", "ChangeRole", "Manage")
 <br />

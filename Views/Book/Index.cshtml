@@ -7,9 +7,12 @@
 
 <h2>@Library.Resources.SharedResource.Books</h2>
 
-@if (User.Identity.IsAuthenticated && User.IsInRole("Admin")|| User.Identity.IsAuthenticated && User.IsInRole("Worker"))
-{
+<p>@Html.ActionLink(Library.Resources.SharedResource.SearchCategory, "SearchBookByCategory")</p>
+<p>@Html.ActionLink(Library.Resources.SharedResource.SearchTag, "SearchBookByTag")</p>
+<p>@Html.ActionLink(Library.Resources.SharedResource.SearchString, "SearchBook")</p>
 
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin") || User.Identity.IsAuthenticated && User.IsInRole("Worker"))
+{
 <p>
     @Html.ActionLink(Library.Resources.SharedResource.CreateNew, "Create", null, new { @class = "btn btn-primary" });
 </p>}
@@ -38,7 +41,7 @@
         <div class="col-md-10">
             @if (item.Pictures.Count > 0)
             {
-<img src="@Html.DisplayFor(modelItem => item.Pictures.ElementAt(0).Link)" alt="HTML% Icon" style="width:110px;height:110px" />                }
+<img src="@Html.DisplayFor(modelItem => item.Pictures.ElementAt(0).Link)" alt="HTML% Icon" style="width:110px;height:110px" />}
         </div>
     </td>
     <td>
@@ -56,10 +59,10 @@
     <td>
         @using (Html.BeginForm("OrderNow", "ShoppingCart", FormMethod.Post))
         {
-                        @Html.Hidden("quantity", 1)
-                        @Html.Hidden("id", item.ISBN)
-                        @Html.Hidden("title", item.Title)
-                        <button type="submit" class="btn btn-danger">@Library.Resources.SharedResource.Add</button>}
+@Html.Hidden("quantity", 1)
+                    @Html.Hidden("id", item.ISBN)
+                                        @Html.Hidden("title", item.Title)
+                                                            <button type="submit" class="btn btn-danger">@Library.Resources.SharedResource.Add</button>}
     </td>
     <td>
         @Html.ActionLink(Library.Resources.SharedResource.Details, "Details", new { id = item.ISBN }, new { @class = "btn btn-warning" })
@@ -67,11 +70,11 @@
 
         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin") || User.Identity.IsAuthenticated && User.IsInRole("Worker"))
         {
-    @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id = item.ISBN }, new { @class = "btn btn-danger" })}
+@Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id = item.ISBN }, new { @class = "btn btn-danger" })}
 
         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin") || User.Identity.IsAuthenticated && User.IsInRole("Worker"))
         {
-    @Html.ActionLink(Library.Resources.SharedResource.Delete, "Delete", new { id = item.ISBN }, new { @class = "btn btn-primary" })}
+@Html.ActionLink(Library.Resources.SharedResource.Delete, "Delete", new { id = item.ISBN }, new { @class = "btn btn-primary" })}
 
 
 
