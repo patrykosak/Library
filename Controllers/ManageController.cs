@@ -270,7 +270,7 @@ namespace Library.Controllers
 
             List<SelectListItem> listUsers = new List<SelectListItem>();
             foreach (var user in UserManager.Users)
-                listUsers.Add(new SelectListItem() { Value = user.Id, Text = user.Id });
+                listUsers.Add(new SelectListItem() { Value = user.Id, Text = user.Id});
             ViewBag.Users = listUsers;
             return View();
         }
@@ -285,7 +285,8 @@ namespace Library.Controllers
             {
                 return View(model);
             }
-            var result = await UserManager.RemoveFromRolesAsync(model.UserID);
+            var roles = await UserManager.GetRolesAsync(model.UserID);
+            var result = await UserManager.RemoveFromRolesAsync(model.UserID, roles.ToArray());
             if (result.Succeeded)
             {
                 var user = await UserManager.AddToRoleAsync(model.UserID,model.RoleName);

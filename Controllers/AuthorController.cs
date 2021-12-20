@@ -11,17 +11,20 @@ using Library.Models;
 
 namespace Library.Controllers
 {
+    
     public class AuthorController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Author
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Index()
         {
             return View(db.Authors.ToList());
         }
 
         // GET: Author/Details/5
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +40,7 @@ namespace Library.Controllers
         }
 
         // GET: Author/Create
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Create()
         {
             return View();
@@ -47,6 +51,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Create([Bind(Include = "AuthorID,Name,Surname,BirthDate")] Author author)
         {
             if (ModelState.IsValid)
@@ -60,6 +65,7 @@ namespace Library.Controllers
         }
 
         // GET: Author/Edit/5
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -79,6 +85,7 @@ namespace Library.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Edit([Bind(Include = "AuthorID,Name,Surname,BirthDate")] Author author)
         {
             if (ModelState.IsValid)
@@ -91,6 +98,7 @@ namespace Library.Controllers
         }
 
         // GET: Author/Delete/5
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -108,6 +116,7 @@ namespace Library.Controllers
         // POST: Author/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Worker")]
         public ActionResult DeleteConfirmed(int id)
         {
             Author author = db.Authors.Find(id);
