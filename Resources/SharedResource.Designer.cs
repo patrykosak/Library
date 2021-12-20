@@ -340,6 +340,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://i.ibb.co/KbGF6Qy/imageonline-co-add-text-3.png.
+        /// </summary>
+        public static string OrderJpg {
+            get {
+                return ResourceManager.GetString("OrderJpg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Order Now.
         /// </summary>
         public static string OrderNow {

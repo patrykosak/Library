@@ -210,6 +210,9 @@
   <data name="NewBooks" xml:space="preserve">
     <value>Neue bücher</value>
   </data>
+  <data name="OrderJpg" xml:space="preserve">
+    <value>https://i.ibb.co/Kww1Tx9/imageonline-co-add-text-5.png</value>
+  </data>
   <data name="OrderNow" xml:space="preserve">
     <value>Jetzt bestellen</value>
   </data>
