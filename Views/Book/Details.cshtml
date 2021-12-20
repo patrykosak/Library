@@ -17,70 +17,80 @@
 </div>
             }
 
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Author.Name)
-        </dt>
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(model => model.Author.Name)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Author.Name)
-        </dd>
+    <dd>
+        @Html.DisplayFor(model => model.Author.Name)
+    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PublishingHouse.Name)
-        </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.PublishingHouse.Name)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PublishingHouse.Name)
-        </dd>
+    <dd>
+        @Html.DisplayFor(model => model.PublishingHouse.Name)
+    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.Title)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Subcategory.Category.Name)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Title)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Subcategory.Category.Name)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Subcategory.Category.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Subcategory.Name)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Subcategory.Category.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Subcategory.Name)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Subcategory.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PublicYear)
-        </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Subcategory.Name)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.PublicYear)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PublicYear)
-        </dd>
+    <dd>
+        @Html.DisplayFor(model => model.PublicYear)
+    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Amount)
-        </dt>
+    <dt>
+        @Html.DisplayNameFor(model => model.Amount)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Amount)
-        </dd>
+    <dd>
+        @Html.DisplayFor(model => model.Amount)
+    </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Files)
-        </dt>
-        <dd>
-            @foreach (var link in Model.Files)
-            {
-                <a href="@link.Address">@link.Name</a>
-            }
-        </dd>
-    </dl>
+    <dt>
+        @Html.DisplayNameFor(model => model.Files)
+    </dt>
+    <dd>
+        @foreach (var link in Model.Files)
+        {
+            <a href="@link.Address">@link.Name</a>
+        }
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Tags)
+    </dt>
+    <dd>
+        @foreach (var tag in Model.Tags)
+        {
+            @tag.Name
+        }
+    </dd>
+</dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ISBN }) |
