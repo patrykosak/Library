@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Library.Models.Order>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Library.Resources.SharedResource.Index;
 }
 
-<h2>Index</h2>
+<h2>@Library.Resources.SharedResource.Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(Library.Resources.SharedResource.CreateNew, "Create")
 </p>
 <table class="table">
     <tr>

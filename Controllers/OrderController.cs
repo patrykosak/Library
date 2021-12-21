@@ -12,6 +12,7 @@ using Microsoft.AspNet.Identity.Owin;
 
 namespace Library.Controllers
 {
+    [CustomAuthorize(Roles = "Admin,Worker")]
     public class OrderController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -22,7 +23,7 @@ namespace Library.Controllers
             var orders = db.Orders.Include(o => o.Cart).Include(o => o.User);
             return View(orders.ToList());
         }
-
+        [CustomAuthorize(Roles = "User,Admin,Worker")]
         public ActionResult UserOrders()
         {
             var user = User.Identity.GetUserId();
