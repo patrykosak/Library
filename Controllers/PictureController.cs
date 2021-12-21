@@ -10,6 +10,7 @@ using Library.Models;
 
 namespace Library.Controllers
 {
+    [CustomAuthorize(Roles = "Admin,Worker")]
     public class PictureController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

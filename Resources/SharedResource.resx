@@ -282,6 +282,9 @@
   <data name="OrderNow" xml:space="preserve">
     <value>Order Now</value>
   </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
   <data name="Polish" xml:space="preserve">
     <value>Polish</value>
   </data>

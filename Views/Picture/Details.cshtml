@@ -1,17 +1,17 @@
 ﻿@model Library.Models.Picture
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Library.Resources.SharedResource.Details;
 }
 
-<h2>Details</h2>
+<h2>@Library.Resources.SharedResource.Details</h2>
 
 <div>
-    <h4>Picture</h4>
+    <h4>@Library.Resources.SharedResource.Picture</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Book.Title)
+            @Library.Resources.SharedResource.Title
         </dt>
 
         <dd>
@@ -29,6 +29,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PictureID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id = Model.PictureID }) |
+    @Html.ActionLink(Library.Resources.SharedResource.BackToList, "Index")
 </p>

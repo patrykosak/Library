@@ -282,6 +282,9 @@
   <data name="OrderNow" xml:space="preserve">
     <value>Jetzt bestellen</value>
   </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Bild</value>
+  </data>
   <data name="Polish" xml:space="preserve">
     <value>Polieren</value>
   </data>
