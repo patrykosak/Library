@@ -234,6 +234,9 @@
   <data name="Files" xml:space="preserve">
     <value>Files</value>
   </data>
+  <data name="Find" xml:space="preserve">
+    <value>Find</value>
+  </data>
   <data name="German" xml:space="preserve">
     <value>German</value>
   </data>
@@ -309,6 +312,9 @@
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="SearchBook" xml:space="preserve">
+    <value>Search Book</value>
+  </data>
   <data name="SearchCategory" xml:space="preserve">
     <value>search for books by category</value>
   </data>
@@ -323,6 +329,9 @@
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Subcategory</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
   </data>
   <data name="Tags" xml:space="preserve">
     <value>Tags</value>

@@ -412,6 +412,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Find.
+        /// </summary>
+        public static string Find {
+            get {
+                return ResourceManager.GetString("Find", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to German.
         /// </summary>
         public static string German {
@@ -637,6 +646,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search Book.
+        /// </summary>
+        public static string SearchBook {
+            get {
+                return ResourceManager.GetString("SearchBook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to search for books by category.
         /// </summary>
         public static string SearchCategory {
@@ -678,6 +696,15 @@ namespace Library.Resources {
         public static string Subcategory {
             get {
                 return ResourceManager.GetString("Subcategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string Submit {
+            get {
+                return ResourceManager.GetString("Submit", resourceCulture);
             }
         }
         

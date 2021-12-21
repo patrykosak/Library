@@ -234,6 +234,9 @@
   <data name="Files" xml:space="preserve">
     <value>Pliki</value>
   </data>
+  <data name="Find" xml:space="preserve">
+    <value>Znajdź</value>
+  </data>
   <data name="German" xml:space="preserve">
     <value>Niemiecki</value>
   </data>
@@ -309,6 +312,9 @@
   <data name="Save" xml:space="preserve">
     <value>Zapisz</value>
   </data>
+  <data name="SearchBook" xml:space="preserve">
+    <value>Szukaj Książki</value>
+  </data>
   <data name="SearchCategory" xml:space="preserve">
     <value>szukaj książek po kategorii</value>
   </data>
@@ -323,6 +329,9 @@
   </data>
   <data name="Subcategory" xml:space="preserve">
     <value>Podkategoria</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Szukaj</value>
   </data>
   <data name="Tags" xml:space="preserve">
     <value>Tagi</value>

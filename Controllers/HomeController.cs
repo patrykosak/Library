@@ -40,6 +40,7 @@ namespace Library.Controllers
 
             return View();
         }
+        [CustomAuthorize(Roles = "Admin,Worker")]
         public ActionResult AdministrationPanel()
         {
 

@@ -261,6 +261,7 @@ namespace Library.Controllers
 
         //
         // GET: /Manage/ChangePassword
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult ChangeRole()
         {
             List<SelectListItem> listRoles = new List<SelectListItem>();
@@ -279,6 +280,7 @@ namespace Library.Controllers
         // POST: /Manage/ChangePassword
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [CustomAuthorize(Roles = "Admin")]
         public async Task<ActionResult> ChangeRole(ChangeRoleViewModel model)
         {
             if (!ModelState.IsValid)
@@ -299,6 +301,7 @@ namespace Library.Controllers
 
         //
         // GET: /Manage/ChangePassword
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult ConfirmUser()
         {
             List<SelectListItem> listRoles = new List<SelectListItem>();
@@ -317,6 +320,7 @@ namespace Library.Controllers
         // POST: /Manage/ChangePassword
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [CustomAuthorize(Roles = "Admin")]
         public async Task<ActionResult> ConfirmUser(ConfirmUserViewModel model)
         {
             if (!ModelState.IsValid)
@@ -333,7 +337,7 @@ namespace Library.Controllers
             AddErrors(result);
             return View(model);
         }
-
+        [CustomAuthorize(Roles = "Admin")]
         public ActionResult DeleteUser()
         {
             List<SelectListItem> listRoles = new List<SelectListItem>();
@@ -349,6 +353,7 @@ namespace Library.Controllers
         // POST: /Manage/ChangePassword
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [CustomAuthorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteUser(DeleteUserViewModel model)
         {
             if (!ModelState.IsValid)

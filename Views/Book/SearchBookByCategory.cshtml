@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "SearchBook";
+    ViewBag.Title = Library.Resources.SharedResource.SearchBook;
 }
 
 @using Library.Models;
@@ -18,9 +18,9 @@
             {
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        Find: @Html.DropDownListFor(m => m.selectedCategory, new SelectList(ViewBag.categories, "Value", "Text"), new { @class = "form-control" })
+                        @Library.Resources.SharedResource.Find: @Html.DropDownListFor(m => m.selectedCategory, new SelectList(ViewBag.categories, "Value", "Text"), new { @class = "form-control" })
                     </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-success">@Library.Resources.SharedResource.Submit</button>
                 </form>
             }
             </div>
@@ -30,26 +30,37 @@
 
             <tr>
 
-                <th>ISBN</th>
-                <th>Title </th>
-                <th>Author</th>
-                <th>Publishing House</th>
+                <th>@Library.Resources.SharedResource.Title </th>
+                <th>@Library.Resources.SharedResource.Author</th>
+                <th>@Library.Resources.SharedResource.PublishingHouse</th>
                 <th></th>
-
             </tr>
             @foreach (Book book in ViewBag.bookList)
             {
-                <tr>
-                    <th> @book.ISBN </th>
-                    <th> @book.Title </th>
-                    <th>
+        <tr>
+            <th> @book.Title </th>
+            <th>
 
-                        @book.Author.Name<a> </a>@book.Author.Surname
-                    </th>
-                    <th> @book.PublishingHouse.Name </th>
+                @book.Author.Name<a> </a>@book.Author.Surname
+            </th>
+            <th> @book.PublishingHouse.Name </th>
+            <th>
+            @Html.ActionLink(Library.Resources.SharedResource.Details, "Details", new { id = book.ISBN }, new { @class = "btn btn-warning" })
 
-                </tr>
+
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin") || User.Identity.IsAuthenticated && User.IsInRole("Worker"))
+            {
+                @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id = book.ISBN }, new { @class = "btn btn-danger" })}
+
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin") || User.Identity.IsAuthenticated && User.IsInRole("Worker"))
+            {
+                @Html.ActionLink(Library.Resources.SharedResource.Delete, "Delete", new { id = book.ISBN }, new { @class = "btn btn-primary" })}
+
+            
+            </th>
+        </tr>
             }
+
 
         </table>
 
