@@ -1,17 +1,17 @@
 ﻿@model Library.Models.Message
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Library.Resources.SharedResource.Details;
 }
 
-<h2>Details</h2>
+<h2>@Library.Resources.SharedResource.Details</h2>
 
 <div>
-    <h4>Message</h4>
+    <h4>@Library.Resources.SharedResource.Message</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Title)
+            @Library.Resources.SharedResource.Title
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Text)
+            @Library.Resources.SharedResource.Text
         </dt>
 
         <dd>
@@ -29,6 +29,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MessageID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id = Model.MessageID }) |
+    @Html.ActionLink(Library.Resources.SharedResource.BackToList, "Index")
 </p>

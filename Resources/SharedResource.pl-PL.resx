@@ -261,6 +261,9 @@
   <data name="MakeOrder" xml:space="preserve">
     <value>Złóż zamówienie</value>
   </data>
+  <data name="Message" xml:space="preserve">
+    <value>Ogłoszenie</value>
+  </data>
   <data name="MyOrders" xml:space="preserve">
     <value>Moje zamówienia</value>
   </data>
@@ -323,6 +326,9 @@
   </data>
   <data name="Tags" xml:space="preserve">
     <value>Tagi</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Tekst</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Motyw</value>
