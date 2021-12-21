@@ -135,6 +135,9 @@
   <data name="AddPictures" xml:space="preserve">
     <value>Add pictures to book</value>
   </data>
+  <data name="AddRole" xml:space="preserve">
+    <value>Add Role</value>
+  </data>
   <data name="AddTags" xml:space="preserve">
     <value>Add tags to book</value>
   </data>
@@ -287,6 +290,9 @@
   </data>
   <data name="OrderNow" xml:space="preserve">
     <value>Order Now</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
   </data>
   <data name="Picture" xml:space="preserve">
     <value>Picture</value>

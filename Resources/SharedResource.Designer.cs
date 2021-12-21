@@ -115,6 +115,15 @@ namespace Library.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Role.
+        /// </summary>
+        public static string AddRole {
+            get {
+                return ResourceManager.GetString("AddRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add tags to book.
         /// </summary>
         public static string AddTags {
@@ -570,6 +579,15 @@ namespace Library.Resources {
         public static string OrderNow {
             get {
                 return ResourceManager.GetString("OrderNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orders.
+        /// </summary>
+        public static string Orders {
+            get {
+                return ResourceManager.GetString("Orders", resourceCulture);
             }
         }
         

@@ -135,6 +135,9 @@
   <data name="AddPictures" xml:space="preserve">
     <value>Bilder zum Buch hinzufügen</value>
   </data>
+  <data name="AddRole" xml:space="preserve">
+    <value>Add Role</value>
+  </data>
   <data name="AddTags" xml:space="preserve">
     <value>Tags zum Buch hinzufügen</value>
   </data>
@@ -288,6 +291,9 @@
   <data name="OrderNow" xml:space="preserve">
     <value>Jetzt bestellen</value>
   </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Aufträge</value>
+  </data>
   <data name="Picture" xml:space="preserve">
     <value>Bild</value>
   </data>
@@ -323,6 +329,9 @@
   </data>
   <data name="SearchTag" xml:space="preserve">
     <value>Suche nach einem Buch nach Tags</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Rolle hinzufügen</value>
   </data>
   <data name="Subcategories" xml:space="preserve">
     <value>Unterkategorien</value>
