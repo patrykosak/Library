@@ -1,18 +1,18 @@
 ﻿@model Library.Models.PublishingHouse
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = Library.Resources.SharedResource.Delete;
 }
 
-<h2>Delete</h2>
+<h2>@Library.Resources.SharedResource.Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>@Library.Resources.SharedResource.DeleteConfirm</h3>
 <div>
-    <h4>PublishingHouse</h4>
+    <h4>@Library.Resources.SharedResource.PublishingHouse</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Library.Resources.SharedResource.Name
         </dt>
 
         <dd>
@@ -25,8 +25,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="@Library.Resources.SharedResource.Delete class="btn btn-default" /> |
+            @Html.ActionLink(Library.Resources.SharedResource.BackToList, "Index")
         </div>
     }
 </div>

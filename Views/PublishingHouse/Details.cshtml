@@ -1,17 +1,17 @@
 ﻿@model Library.Models.PublishingHouse
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Library.Resources.SharedResource.Details;
 }
 
-<h2>Details</h2>
+<h2>@Library.Resources.SharedResource.Details</h2>
 
 <div>
-    <h4>PublishingHouse</h4>
+    <h4>@Library.Resources.SharedResource.PublishingHouse</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Library.Resources.SharedResource.Name
         </dt>
 
         <dd>
@@ -21,6 +21,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.publishingHouseID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id = Model.publishingHouseID }) |
+    @Html.ActionLink(Library.Resources.SharedResource.BackToList, "Index")
 </p>

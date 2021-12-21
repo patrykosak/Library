@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<Library.Models.PublishingHouse>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Library.Resources.SharedResource.Index;
 }
 
-<h2>Index</h2>
+<h2>@Library.Resources.SharedResource.Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(Library.Resources.SharedResource.CreateNew, "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Library.Resources.SharedResource.Name
         </th>
         <th></th>
     </tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.publishingHouseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.publishingHouseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.publishingHouseID })
+            @Html.ActionLink(Library.Resources.SharedResource.Edit, "Edit", new { id=item.publishingHouseID }) |
+            @Html.ActionLink(Library.Resources.SharedResource.Details, "Details", new { id=item.publishingHouseID }) |
+            @Html.ActionLink(Library.Resources.SharedResource.Delete, "Delete", new { id=item.publishingHouseID })
         </td>
     </tr>
 }

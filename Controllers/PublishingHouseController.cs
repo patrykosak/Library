@@ -11,6 +11,7 @@ using Library.Models;
 
 namespace Library.Controllers
 {
+    [CustomAuthorize(Roles = "Admin,Worker")]
     public class PublishingHouseController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
